@@ -1,10 +1,12 @@
+import rice from '../Components/RiceNaSpice.png'
+
 const data7 = {
     items7:[
         {
             id:'2',
             name:'Rice N Spice',
             price:250,
-            image:'https://images.kfcpakistan.com/image/1670409072074-image.jpg',
+            image:rice,
             link:'/RiceNSpice',
             descp:'Spiced, buttery rice with 6 pcs of Hot Shots topped with our signature Vietnamese sauce'
         }

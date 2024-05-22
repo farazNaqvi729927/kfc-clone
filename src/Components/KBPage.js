@@ -1,7 +1,6 @@
 import React,{useEffect} from 'react'
 import { Link } from 'react-router-dom'
 import AOS from 'aos';
-import 'aos/dist/aos.css';
 export default function KBPage(props) {
     const s = {
         fontSize: '1.3rem',
@@ -17,7 +16,7 @@ export default function KBPage(props) {
       }, [])
 
     return (
-        <div className='y' data-aos='fade-right' data-aos-duration="1000" data-aos-easing="ease-out-cubic">
+        <div className='y'>
             <Link className="nav-link active" aria-current="page" to={props.item.link}>
                 <img style={{ height: '10%', width: '100%' }} src={props.item.image} alt="" />
                 <div>

@@ -2,7 +2,8 @@ import './App.css';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import NB from './Components/NavBar';
 import Homepage from './Components/Homepage';
-import SignUp from './Components/SignUp';
+import Signup from './Components/SignUp';
+import Login from './Components/Login';
 import ScrollToTop from './Components/ScrollToTop';
 import EverydayValue from './Components/EveryDayValue';
 import AlaCarteCombo from './Components/AlaCarteCombo';
@@ -28,7 +29,11 @@ import CrispyBox from './Components/Bevrages/CrispyBox';
 import Boneless from './Components/Bevrages/Boneless';
 import Wow from './Components/Bevrages/Wow';
 import Duo from './Components/Bevrages/CrispyDou';
-import data4 from './Components/DATA4';
+
+import data1 from './Components/FF1Data';
+import data2 from './Components/FF2Data';
+import data3 from './Components/FF3Data';
+import data4 from './Components/ValueBucketData';
 import data6 from './Components/KBData';
 import data7 from './Components/ChipsData';
 import data8 from './Components/ZingData';
@@ -47,6 +52,9 @@ import Bucket from './Components/Bucket';
 function App() {
   const [num, setNum] = useState([])
   const [count, setCount] = useState(1);
+  const { items1 } = data1
+  const { items2 } = data2
+  const { items3 } = data3
   const { items4 } = data4
   const { items6 } = data6
   const { items7 } = data7
@@ -144,10 +152,11 @@ function App() {
         <NB onRemove={onRemove} Add={Add} itemPrice = {itemPrice} num={num.length} Num={num} />
         <Routes>
           <Route exact path='/' element={<Homepage Add={Add} items6={items6} items7={items7} items10={items10} items11={items11} />} />
-          <Route exact path='/h' element={<SignUp />} />
+          <Route exact path='/h' element={<Login />} />
+          <Route exact path='/s' element={<Signup />} />          
           <Route exact path='/a1' element={<EverydayValue Add={Add} items6={items6} items7={items7} items8={items8} items9={items9} />} />
           <Route exact path='/b1' element={<AlaCarteCombo Add={Add} items14={items14} items15={items15} items16={items16} items17={items17} />} />
-          <Route exact path='/d1' element={<Sharing Add={Add} items4={items4} />} />
+          <Route exact path='/d1' element={<Sharing Add={Add} items1 = {items1} items2 = {items2} items3 = {items3} items4={items4} />} />
           <Route exact path='/e1' element={<SnackNBevrages Add={Add} items10={items10} items11={items11} items12={items12} items13={items13} />} />
 
           {/*Everyday Value routes */}

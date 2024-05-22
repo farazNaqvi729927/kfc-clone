@@ -17,7 +17,7 @@ export default function SideBar(props) {
       <div style={{ marginTop: '100px', position: 'absolute', left: '10px' }}>
         {
           Num < 1 &&
-          <div style={{ color: 'white', width: '370px', marginTop: '180px' }}><img style={{ marginLeft: '40%' }} src="https://www.kfcpakistan.com/assets/images/bucket.png" alt="STFU" /><br />
+          <div style={{ color: 'white', width: '370px', marginTop: '180px' }}><img style={{ marginLeft: '40%' }} src="https://www.kfcpakistan.com/assets/images/bucket.png" alt="" /><br />
             <p style={{ textAlign: 'center', fontSize: 'larger' }}>You havent added any items in bucket yet</p> </div>
         }
 

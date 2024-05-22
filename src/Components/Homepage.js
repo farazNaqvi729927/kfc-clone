@@ -1,21 +1,19 @@
-import React,{useEffect} from 'react'
+import React from 'react'
 import Slider from './Slider'
 import { Link } from 'react-router-dom';
 import Kfc from './logo.png'
 import SpicePage from './SpicePage';
 import KBPage from './KBPage';
 import BonelessPage from './BonelessPage';
-import AOS from 'aos';
-import 'aos/dist/aos.css';
 import CrispyDuoPage from './CrispyDuoPage';
+import everyday from './EverydayValueH.png';
+import alaCarte from './AlaCarteComboH.png';
+import sharing from './SharingH.png';
+import Bev from './SnackNBevragesH.png';
 
 
 export default function Homepage(props) {
   const { items6, items7, items10, items11 } = props;
-  useEffect(() => {
-    AOS.init();
-  }, [])
-
 
 
   return (
@@ -29,30 +27,52 @@ export default function Homepage(props) {
           </div>
 
           <div className='t'>
-            <div data-aos='fade-up' data-aos-duration="500" data-aos-easing="ease-out-cubic">
+
+            <div className='yq'>
+
               <Link className="nav-link active" aria-current="page" to="/a1">
-                <img src="https://images.kfcpakistan.com/image/1670428227978-image.jpg" alt="" />
+
+                <img style={{ height: '5%', width: '70%', marginLeft: '30px' }} src={everyday} alt="" />
+                <h5 style={{ marginLeft: '45px' }}>Every Day Value</h5>
+                <div style={{ marginLeft: '60px', borderRadius: '3px', backgroundColor: '#E4002B', width: '100px', marginTop: '10px', height: '3.5px' }} />
               </Link>
+
             </div>
 
-            <div data-aos='fade-up' data-aos-duration="700" data-aos-easing="ease-out-cubic">
+            <div className='yq'>
+
               <Link className="nav-link active" aria-current="page" to="/b1">
-                <img src="https://images.kfcpakistan.com/image/1664808314387-image.png" alt="" />
+                <img style={{ height: '5%', width: '70%', marginLeft: '30px' }} src={alaCarte} alt="" />
+                <h5 style={{ marginLeft: '45px' }}>Ala Carte Combo</h5>
+                <div style={{ marginLeft: '60px', borderRadius: '3px', backgroundColor: '#E4002B', width: '100px', marginTop: '10px', height: '3.5px' }} />
               </Link>
+
             </div>
 
-            <div data-aos='fade-up' data-aos-duration="900" data-aos-easing="ease-out-cubic">
+            <div className='yq'>
+
               <Link className="nav-link active" aria-current="page" to="/d1">
-                <img src="https://images.kfcpakistan.com/image/1670428289482-image.jpg" alt="" />
+                <img style={{ height: '5%', width: '70%', marginLeft: '30px' }} src={sharing} alt="" />
+                <h5 style={{ marginLeft: '80px' }}>Sharing</h5>
+                <div style={{ marginLeft: '60px', borderRadius: '3px', backgroundColor: '#E4002B', width: '100px', marginTop: '10px', height: '3.5px' }} />
               </Link>
+
             </div>
 
-            <div data-aos='fade-up' data-aos-duration="1200" data-aos-easing="ease-out-cubic">
+            <div className='yq'>
+
               <Link className="nav-link active" aria-current="page" to="/e1">
-                <img src="https://images.kfcpakistan.com/image/1670428300613-image.jpg" alt="" />
+
+                <img style={{ height: '5%', width: '70%', marginLeft: '30px' }} src={Bev} alt="" />
+                <h5 style={{ marginLeft: '25px' }}>Snacks and Beverages</h5>
+                <div style={{ marginLeft: '60px', borderRadius: '3px', backgroundColor: '#E4002B', width: '100px', marginTop: '10px', height: '3.5px' }} />
+
               </Link>
+
             </div>
+
           </div>
+
         </div>
 
 
@@ -63,35 +83,34 @@ export default function Homepage(props) {
           </div>
 
           <div className='x'>
-            <>
-              {
-                items6.map((item) => {
-                  return <KBPage key={item.id} item={item} Add={props.Add} />
 
-                })
-              }
+            {
+              items6.map((item) => {
+                return <KBPage key={item.id} item={item} Add={props.Add} />
 
-              {
-                items7.map((item) => {
-                  return <SpicePage key={item.id} item={item} Add={props.Add} />
+              })
+            }
 
-                })
-              }
+            {
+              items7.map((item) => {
+                return <SpicePage key={item.id} item={item} Add={props.Add} />
 
-              {
-                items10.map((item) => {
-                  return <CrispyDuoPage key={item.id} item={item} Add={props.Add} />
+              })
+            }
 
-                })
-              }
+            {
+              items10.map((item) => {
+                return <CrispyDuoPage key={item.id} item={item} Add={props.Add} />
 
-              {
-                items11.map((item) => {
-                  return <BonelessPage key={item.id} item={item} Add={props.Add} />
+              })
+            }
 
-                })
-              }
-            </>
+            {
+              items11.map((item) => {
+                return <BonelessPage key={item.id} item={item} Add={props.Add} />
+
+              })
+            }
           </div>
         </div>
 

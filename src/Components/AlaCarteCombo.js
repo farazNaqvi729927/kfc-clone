@@ -31,7 +31,7 @@ export default function AlaCarteCombo(props) {
       </nav>
 
       <div className='h1'>
-        <p style={{ color: 'white', fontSize: '1.7rem' }}>STFU  Alabala</p>
+        <p style={{ color: 'white', fontSize: '1.7rem' }}>Ale Carte Combo</p>
         <div style={{ backgroundColor: '#3F3F3F', width: '900px', marginTop: '15px', height: '2px' }} />
       </div>
 

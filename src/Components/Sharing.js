@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 import Kfc from './logo.png'
 import SharePage from './SharePage'
 export default function Sharing(props) {
-    const { Add, items4 } = props
+    const { Add, items1, items2, items3, items4 } = props
 
     return (
         <div className='u'>
@@ -32,6 +32,30 @@ export default function Sharing(props) {
             </div>
 
             <div className='x'>
+                {
+                    items1.map((item) => {
+                        return <SharePage key={item.id} item={item} Add={Add} />
+
+                    })
+                }
+
+                {
+                    items2.map((item) => {
+                        return <SharePage key={item.id} item={item} Add={Add} />
+
+                    })
+
+                }
+
+
+                {
+                    items3.map((item) => {
+                        return <SharePage key={item.id} item={item} Add={Add} />
+
+                    })
+
+                }
+
                 {
                     items4.map((item) => {
                         return <SharePage key={item.id} item={item} Add={Add} />

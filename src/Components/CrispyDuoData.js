@@ -1,10 +1,12 @@
+import dou from '../Components/CrispyDuoPic.png'
+
 const data10 = {
     items10:[
         {
             id:'3',
             name:'Crispy Duo Box',
             price:1080,
-            image:'https://images.kfcpakistan.com/image/1670410747895-image.jpg',
+            image: dou,
             link:'/CrispyDuoBox',
             descp:'Turn up the fun with 5 pcs Hot & Crispy Chicken + 1 large fries + 2 drinks'
         }

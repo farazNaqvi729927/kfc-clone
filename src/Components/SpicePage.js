@@ -18,7 +18,7 @@ export default function SpicePage(props) {
       }, [])
 
     return (
-        <div className='y'  data-aos='fade-right' data-aos-duration="1500" data-aos-easing="ease-out-cubic">
+        <div className='y'>
             <Link className="nav-link active" aria-current="page" to={props.item.link}>
                 <img style={{ height: '10%', width: '100%' }} src={props.item.image} alt="" />
                 <div>

@@ -1,63 +1,187 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { Link } from 'react-router-dom'
-export default function ValueBucket() {
-    const [count, setCount] = useState(1);
+import { useMediaQuery } from 'react-responsive';
 
-    const incre = () => {
-        setCount(count + 1);
-    }
 
-    const decre = () => {
-        if (count > 1) {
-            setCount(count - 1);
-        }
-    }
+export default function ValueBucket(props) {
 
+
+    const isOwof = useMediaQuery({ query: '(max-width: 1024px)' });
+    const isOffz = useMediaQuery({ query: '(max-width: 1440px)' });
+    const isOntz = useMediaQuery({ query: '(max-width: 1920px)' });
+
+
+    const { items4, Add } = props
 
     return (
         <div>
             <nav style={{ zIndex: '1' }} className='navbar navbar-expand-lg fixed-top navbar-dark bg-black'>
-                <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span className="navbar-toggler-icon"></span>
-                </button>
-                <div className='a1'>
+
+
+                <div className={isOwof ? 'a11024' : isOffz ? 'a11440' : isOntz ? 'a11920' : 'a1'}>
                     <div id='qq'>
-                        <Link className="nav-link  active a2 a3" aria-current="page" to="/a1"> Everyday Value</Link>
+                        <Link className={isOwof ? "nav-link  active a21024" : isOffz ? "nav-link  active a21440" : isOntz ? "nav-link  active a21920" : 'nav-link  active a2'} aria-current="page" to="/a1"> Everyday Value</Link>
                     </div>
 
                     <div id='qq'>
-                        <Link className="nav-link active a2 " aria-current="page" to="/b1">Ala Carte & Combos</Link>
+                        <Link className={isOwof ? "nav-link  active a21024" : isOffz ? "nav-link  active a21440" : isOntz ? "nav-link  active a21920" : 'nav-link  active a2'} aria-current="page" to="/b1">Ala Carte & Combos</Link>
                     </div>
 
                     <div id='qq'>
-                        <Link className="nav-link active a2" aria-current="page" to="/d1">Sharing</Link>
+                        <Link className={isOwof ? "nav-link  active a21024 a31024" : isOffz ? "nav-link  active a21440 a31440" : isOntz ? "nav-link  active a21920 a31920" : 'nav-link  active a2 a3'} aria-current="page" to="/d1">Sharing</Link>
                     </div>
 
                     <div id='qq'>
-                        <Link className="nav-link active a2" aria-current="page" to="/e1">Snacks & Beverages</Link>
+                        <Link className={isOwof ? "nav-link  active a21024" : isOffz ? "nav-link  active a21440" : isOntz ? "nav-link  active a21920" : 'nav-link  active a2'} aria-current="page" to="/e1">Snacks & Beverages</Link>
                     </div>
                 </div>
             </nav>
 
-            <div className='cb' style={{ color: 'white', height: '450px', marginTop: '200px' }}>
-                <div className='zzz'>
-                    <img src="https://www.kfcpakistan.com/assets/images/bg-ellipse.png" alt="" />
-                    <img style={{ position: 'absolute', top: '250px', left: '250px', height: '390px' }} src="https://images.kfcpakistan.com/image/1670410786460-image.jpg" alt="" />
-                </div>
+            {
+                items4.map((x) => {
+                    return <div key={x.id}>
+                        {
+                            isOwof ? (
+                                <div className='cb1024'>
 
-                <div style={{ marginTop: '60px', justifyContent: 'space-between', alignItems: 'center' }}>
-                    <h1 style={{ fontWeight: 'bold', lineHeight: '1.167' }}>Value Bucket</h1>
-                    <h5 style={{}}> Our pride and joy: hand-breaded and fried to perfection in house. 9 pcs of Colonel’s Sign</h5>
-                    <h2 style={{ fontWeight: 'bold' }}>Rs 1630</h2>
+                                    <div className='zzz'>
 
-                    <div style={{ display: 'flex', gap: '15px', marginTop: '15px' }}>
-                        <button id='qqq' onClick={decre}>-</button>
-                        <h5 style={{ marginTop: '10px', width: '20px', marginLeft: '5px' }}>{count}</h5>
-                        <button id='qqq' onClick={incre}>+</button>
-                        <button className='ee'>Add to bucket</button>
+                                        <img src="https://www.kfcpakistan.com/assets/images/bg-ellipse.png" alt="" />
+                                        <img style={{ position: 'absolute', top: '28%', left: '18%', height: '40%' }} src={x.image} alt="" />
+
+                                    </div>
+
+                                    <div style={{ marginTop: '20%', marginRight: '14%' }}>
+
+                                        <h3 style={{ fontWeight: 'bold', lineHeight: '1.167' }}>{x.name}</h3>
+
+                                        <h6>Crunchy chicken fillet, spicy mayo, lettuce, sandwiched between a sesame seed bun</h6>
+
+                                        <h3 style={{ fontWeight: 'bold' }}>Rs {x.price}</h3>
+
+                                        <div style={{ display: 'flex', gap: '15px', marginTop: '15px' }}>
+
+                                            <button className='qqq1024' onClick={props.decre}>-</button>
+
+                                            <h5 style={{ marginTop: '10px', width: '20px', marginLeft: '5px' }}>{props.count}</h5>
+
+                                            {props.count < 10 ? <button className='qqq1024' onClick={props.incre}>+</button> : <button id='ppp' onClick={props.incre}>+</button>}
+
+                                            <button onClick={() => Add(x)} className='ee1024'>Add to bucket</button>
+                                        </div>
+
+                                    </div>
+
+                                </div>
+                            )
+
+
+
+                                : isOffz ? (
+                                    <div className='cb1440'>
+
+                                        <div className='zzz'>
+
+                                            <img src="https://www.kfcpakistan.com/assets/images/bg-ellipse.png" alt="" />
+                                            <img style={{ position: 'absolute', top: '28%', left: '18%', height: '40%' }} src={x.image} alt="" />
+
+                                        </div>
+
+                                        <div style={{ marginTop: '25%', marginRight: '14%' }}>
+
+                                            <h1 style={{ fontWeight: 'bold', lineHeight: '1.167' }}>{x.name}</h1>
+
+                                            <h5>Crunchy chicken fillet, spicy mayo, lettuce, sandwiched between a sesame seed bun</h5>
+
+                                            <h3 style={{ fontWeight: 'bold' }}>Rs {x.price}</h3>
+
+                                            <div style={{ display: 'flex', gap: '15px', marginTop: '15px' }}>
+
+                                                <button className='qqq1440' onClick={props.decre}>-</button>
+
+                                                <h5 style={{ marginTop: '10px', width: '20px', marginLeft: '5px', fontSize: '30px' }}>{props.count}</h5>
+
+                                                {props.count < 10 ? <button className='qqq1440' onClick={props.incre}>+</button> : <button className='ppp1440' onClick={props.incre}>+</button>}
+
+                                                <button onClick={() => Add(x)} className='ee1440'>Add to bucket</button>
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+                                )
+
+
+
+                                    : isOntz ? (
+                                        <div className='cb1920'>
+
+                                            <div className='zzz'>
+
+                                                <img src="https://www.kfcpakistan.com/assets/images/bg-ellipse.png" alt="" />
+                                                <img style={{ position: 'absolute', top: '28%', left: '17%', height: '50%' }} src={x.image} alt="" />
+
+                                            </div>
+
+                                            <div style={{ marginTop: '30%', marginRight: '10%' }}>
+
+                                                <div style={{ fontSize: '55px', fontWeight: 'bold', lineHeight: '1.167' }}>{x.name}</div>
+
+                                                <h3>Crunchy chicken fillet, spicy mayo, lettuce, sandwiched between a sesame seed bun</h3>
+
+                                                <h1 style={{ fontWeight: 'bold' }}>Rs {x.price}</h1>
+
+                                                <div style={{ display: 'flex', gap: '15px', marginTop: '15px' }}>
+
+                                                    <button className='qqq1920' onClick={props.decre}>-</button>
+
+                                                    <h5 style={{ marginTop: '10px', width: '20px', marginLeft: '5px', fontSize: '35px' }}>{props.count}</h5>
+
+                                                    {props.count < 10 ? <button className='qqq1920' onClick={props.incre}>+</button> : <button className='ppp1920' onClick={props.incre}>+</button>}
+
+                                                    <button onClick={() => Add(x)} className='ee1920'>Add to bucket</button>
+                                                </div>
+
+                                            </div>
+
+                                        </div>
+                                    )
+
+
+
+
+
+
+
+
+                                        : (
+                                            <div className='cb'>
+                                                <div className='zzz'>
+                                                    <img alt="" />
+                                                    <img style={{ position: 'absolute', top: '150px', left: '250px', height: '390px' }} src={x.image} alt="" />
+                                                </div>
+
+                                                <div style={{ marginTop: '60px', justifyContent: 'space-between', alignItems: 'center' }}>
+                                                    <h1 style={{ fontWeight: 'bold', lineHeight: '1.167' }}>{x.name}</h1>
+                                                    <h5 style={{}}>Crunchy chicken fillet, spicy mayo, lettuce, sandwiched between a sesame seed bun</h5>
+                                                    <h2 style={{ fontWeight: 'bold' }}>Rs {x.price}</h2>
+
+                                                    <div style={{ display: 'flex', gap: '15px', marginTop: '15px' }}>
+                                                        <button id='qqq' onClick={props.decre}>-</button>
+                                                        <h5 style={{ marginTop: '10px', width: '20px', marginLeft: '5px' }}>{props.count}</h5>
+                                                        {props.count < 10 ? <button id='qqq' onClick={props.incre}>+</button> : <button id='ppp' onClick={props.incre}>+</button>}
+                                                        <button onClick={() => Add(x)} className='ee'>Add to bucket</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        )
+                        }
                     </div>
-                </div>
-            </div>
+                })
+
+            }
         </div>
+
     )
 }

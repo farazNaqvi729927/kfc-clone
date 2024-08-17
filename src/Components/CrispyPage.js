@@ -1,41 +1,60 @@
-import React,{useEffect} from 'react'
+import React from 'react'
 import { Link } from 'react-router-dom'
-import AOS from 'aos';
 import 'aos/dist/aos.css';
+import { useMediaQuery } from 'react-responsive';
+
+
+
+
 export default function CrispyPage(props) {
 
-    const s = {
-        fontSize: '1.3rem',
-        fontFamily: 'National2CondensedBold',
-        fontWeight: 300,
-        lineHeight: 1.167,
-        color: 'white',
-        marginTop: '8px'
-    }
+    const isOwof = useMediaQuery({ query: '(max-width: 1024px)' });
+    const isOffz = useMediaQuery({ query: '(max-width: 1440px)' });
+    const isOntz = useMediaQuery({ query: '(max-width: 1920px)' });
 
-    useEffect(() => {
-        AOS.init();
-      }, [])
+
 
     return (
-        <div className='y'>
-            <Link className="nav-link active" aria-current="page" to={props.item.link}>
-                <img style={{ height: '10%', width: '100%' }} src={props.item.image} alt="" />
-                <div>
-                    <h6 style={s}>{props.item.name}</h6>
-                    <p style={{ overflow: 'hidden', color: 'white', fontSize: '0.9rem', paddingTop: '8px', marginBottom: '32px', textOverflow: 'ellipsis' }}>
-                        {props.item.descp}
-                    </p>
-                    <div style={{ display: 'flex' }}>
-                        <div style={{ color: 'white', fontSize: '25px', fontWeight: '400px' }}>
-                            Rs {props.item.price}
-                        </div>
+        
+        <div className={isOwof ? 'y1024' : 'y'}>
+        <Link className="nav-link active" aria-current="page" to={props.item.link}>
 
-                    </div>
-                </div>
-            </Link>
-            <button onClick={() => props.Add(props.item)} id='four'>Add to bucket</button>
-        </div>
+            {
+                isOwof ? (
+                    <img style={{ height: '10%', width: '70%', marginLeft: '15%' }} src={props.item.image} alt="" />
+                )
+
+
+                    : isOffz ? (
+                        <img style={{ width: '70%', marginLeft: '15%', marginTop: '-5%' }} src={props.item.image} alt="" />
+                    )
+
+
+
+                        : isOntz ? (
+                            <img style={{ width: '70%', marginLeft: '15%', marginTop: '-5%' }} src={props.item.image} alt="" />
+                        )
+
+                            :
+
+                            <img style={{ height: '10%', width: '100%' }} src={props.item.image} alt="" />
+
+
+            }
+
+            <div className={isOwof ? 'kbN1024' : isOffz ? 'kbN1440' : isOntz ? 'kbN1920' : 'kbN'}>{props.item.name}</div>
+
+            <p className={isOwof ? 'kbDesc1024' : isOffz ? 'kbDesc1440' : isOntz ? 'kbDesc1920' : 'kbDesc'}>{props.item.descp}</p>
+
+            <div className={isOwof ? 'kbP10249' : isOffz ? 'kbP14409' : isOntz ? 'kbP19207' : 'kbP'}>
+                Rs {props.item.price}
+            </div>
+
+
+        </Link>
+
+        <button onClick={() => props.Add(props.item)} className={isOwof ? 'bucketB1024' : isOffz ? 'bucketB1440' : isOntz ? 'bucketB19207' : 'bucketB'}>Add to bucket</button>
+    </div>
 
     )
 }

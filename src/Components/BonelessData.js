@@ -4,7 +4,7 @@ const data11 = {
     items11:[
         {
             id:'4',
-            name:'Boneless Meal Box',
+            name:'Boneless Meal',
             price:610,
             image: boneless,
             link:'/BonelessMealBox',

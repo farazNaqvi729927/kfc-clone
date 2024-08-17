@@ -173,10 +173,10 @@ function App() {
 
 
           {/*Sharing routes */}
-          <Route exact path='/ValueBucket' element={<ValueBucket />} />
-          <Route exact path='/FamilyFestival1' element={<FFONE />} />
-          <Route exact path='/FamilyFestival2' element={<FFTWO />} />
-          <Route exact path='/FamilyFestival3' element={<FFTHREE />} />
+          <Route exact path='/ValueBucket' element={<ValueBucket incre={incre} decre={decre} count={count} Add={Add} items4={items4}/>} />
+          <Route exact path='/FamilyFestival1' element={<FFONE incre={incre} decre={decre} count={count} Add={Add} items1={items1}/>} />
+          <Route exact path='/FamilyFestival2' element={<FFTWO incre={incre} decre={decre} count={count} Add={Add} items2={items2}/>} />
+          <Route exact path='/FamilyFestival3' element={<FFTHREE incre={incre} decre={decre} count={count} Add={Add} items3={items3}/>} />
 
 
           {/*Bevrages routes */}
@@ -184,7 +184,7 @@ function App() {
           <Route exact path='/BonelessMealBox' element={<Boneless incre={incre} decre={decre} count={count} Add={Add} items11={items11} />} />
           <Route exact path='/WowMealBox' element={<Wow incre={incre} decre={decre} count={count} Add={Add} items13={items13} />} />
           <Route exact path='/CrispyDuoBox' element={<Duo incre={incre} decre={decre} count={count} Add={Add} items10={items10} />} />
-          <Route exact path='/Bucket' element={<Bucket num={num} itemPrice = {itemPrice} onRemove={onRemove} onremove={onremove} Add={Add} />} />
+          <Route exact path='/Bucket' element={<Bucket Num={num} num={num} itemPrice = {itemPrice} onRemove={onRemove} onremove={onremove} Add={Add} />} />
         </Routes>
       </BrowserRouter>
     </div>

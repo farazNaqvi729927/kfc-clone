@@ -10,7 +10,7 @@ import 'aos/dist/aos.css';
 export default function Slider() {
     const style = {
         borderRadius: '5px',
-        height: '480px',
+        height: '780px',
         marginTop: '20px',
     };
 

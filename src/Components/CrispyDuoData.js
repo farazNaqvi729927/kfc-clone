@@ -5,7 +5,7 @@ const data10 = {
         {
             id:'3',
             name:'Crispy Duo Box',
-            price:1080,
+            price:800,
             image: dou,
             link:'/CrispyDuoBox',
             descp:'Turn up the fun with 5 pcs Hot & Crispy Chicken + 1 large fries + 2 drinks'

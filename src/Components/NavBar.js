@@ -2,9 +2,18 @@ import React, { useRef, useEffect, useState } from 'react'
 import { Link } from 'react-router-dom';
 import Kfc from './logo.png'
 import SideBar from './SideBar';
+// import fried from '../Components/fried.png'
+import { useMediaQuery } from 'react-responsive';
+
 
 
 export default function NavBar(props) {
+
+    const isOwof = useMediaQuery({ query: '(max-width: 1024px)' });
+    const isOffz = useMediaQuery({ query: '(max-width: 1440px)' });
+    const isOntz = useMediaQuery({ query: '(max-width: 1920px)' });
+
+
     const [disable, setDisable] = useState(false)
     const Ref = useRef(null)
     const pageRef = useRef(null)
@@ -65,32 +74,85 @@ export default function NavBar(props) {
         <>
 
             <div id='overlay' ref={pageRef}>
-                <nav id='NAV' style={{ height: '95px', pointerEvents: pointer, zIndex: '2' }} className="navbar fixed-top navbar-expand-lg bg-black navbar-dark">
+
+                <nav id='NAV' style={{ height: '95px', pointerEvents: pointer, zIndex: '1200' }} className="navbar fixed-top navbar-expand-lg bg-black navbar-dark">
+
                     <div className='a'>
-                        <Link className="nav-link active" aria-current="page" to="/"><img style={{ position: 'absolute', left: '130px' }} src={Kfc} width='70px' alt="Kfc Rocks" /></Link>
-                        <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                            <span className="navbar-toggler-icon"></span>
-                        </button>
-                        <div className='A'>
-                            <button onClick={showBtn} className='c'>
+
+                        {
+                            isOntz ? (
+                                <Link className="nav-link active" aria-current="page" to="/"><img style={{ height: '90%', width: '95px', marginLeft: '130px', position: 'absolute', top: '5%' }} src={Kfc} width='70px' alt="Kfc Rocks" /></Link>
+
+                            )
+
+                                : (
+                                    <Link className="nav-link active" aria-current="page" to="/"><img style={{ position: 'absolute', left: '9%', top: '10%' }} src={Kfc} width='70px' alt="Kfc Rocks" /></Link>
+
+                                )
+                        }
+
+
+                        <div className={isOwof ? 'A1024' : isOffz ? 'A1440' : isOntz ? 'A1920' : 'A'}>
+
+                            <button onClick={showBtn} className={isOwof ? 'c1024' : isOffz ? 'c1440' : isOntz ? 'c1920' : 'c'}>
                                 <img style={{ backgroundColor: 'transparent' }} height={15} src="https://www.kfcpakistan.com/assets/images/channels/1.png" alt="" />
-                                <div style={{ marginLeft: '3px', backgroundColor: 'transparent' }}>
-                                    Delivery
-                                </div>
+                                Delivery
                             </button>
-                            <button onClick={hideBtn} className='c' >
+
+                            <button onClick={hideBtn} className={isOwof ? 'c1024' : isOffz ? 'c1440' : isOntz ? 'c1920' : 'c'} >
                                 <img style={{ backgroundColor: 'transparent' }} height={18} src="https://www.kfcpakistan.com/assets/images/channels/2.png" alt="" />
-                                <div style={{ marginLeft: '3px', backgroundColor: 'transparent' }}>
-                                    Pickup
-                                </div>
+                                Pickup
                             </button>
+
                         </div>
-                        <button id='q' className='d'><i style={{ backgroundColor: 'transparent', position: 'absolute', border: 'none', left: '15px' }} className="bi bi-geo-alt-fill"></i> Select Location</button>
 
-                        <img style={{ height: '50px', width: '50px', marginLeft: '560px', marginTop: '17px' }} src="https://www.kfcpakistan.com/static/media/bucket-filled.d2ad11819eca0f28a8ac.svg" alt="" />
-                        {num ? (<button onClick={openSidebar} id='closebtn' className='e' style={{ textDecoration: 'none', backgroundColor: 'transparent', position: 'absolute', right: '285px', marginTop: '24px' }}>{num}</button>) : (<button onClick={openSidebar} id='closebtn' className='e' style={{ textDecoration: 'none', backgroundColor: 'transparent', position: 'absolute', right: '285px', marginTop: '24px' }}>{num}</button>)}
 
-                        <div className="collapse navbar-collapse i" id="navbarNav">
+                        <button id='q' className={isOwof ? 'd1024' : isOffz ? 'd1440' : isOntz ? 'd1920' : 'd'}><i className="bi bi-geo-alt-fill"></i> Select Location</button>
+
+
+                        {
+                            isOwof ? (
+                                <>
+                                    <img style={{ height: '50px', width: '50px', marginLeft: '83.6%', marginTop: '6.5%' }} src="https://www.kfcpakistan.com/static/media/bucket-filled.d2ad11819eca0f28a8ac.svg" alt="" />
+                                    {num ? (<button onClick={openSidebar} id='closebtn' className='e' style={{ textDecoration: 'none', backgroundColor: 'transparent', position: 'relative', left: '-12.5%', marginTop: '25px' }}>{num}</button>) : (<button onClick={openSidebar} id='closebtn' className='e' style={{ textDecoration: 'none', backgroundColor: 'transparent', position: 'relative', left: '-12.5%', marginTop: '25px' }}>{num}</button>)}
+                                </>
+
+                            )
+
+
+                                : isOffz ? (
+                                    <>
+                                        <img style={{ position: 'absolute', left: '70%', top: '18%', height: '70px', width: '60px' }} src="https://www.kfcpakistan.com/static/media/bucket-filled.d2ad11819eca0f28a8ac.svg" alt="" />
+                                        {num ? (<button onClick={openSidebar} id='closebtn' className='e' style={{ textDecoration: 'none', backgroundColor: 'transparent', position: 'relative', left: '155%', marginTop: '17px', fontSize: '20px' }}>{num}</button>) : (<button onClick={openSidebar} id='closebtn' className='e' style={{ textDecoration: 'none', backgroundColor: 'transparent', position: 'relative', left: '155%', marginTop: '17px', fontSize: '20px' }}>{num}</button>)}
+                                    </>
+
+                                )
+
+
+
+                                    : isOntz ? (
+                                        <>
+                                            <img style={{ position: 'absolute', left: '72%', top: '0%', height: '100%', width: '90px' }} src="https://www.kfcpakistan.com/static/media/bucket-filled.d2ad11819eca0f28a8ac.svg" alt="" />
+                                            {num ? (<button onClick={openSidebar} id='closebtn' className='e' style={{ fontSize: '30px', textDecoration: 'none', backgroundColor: 'transparent', position: 'relative', left: '204%', marginTop: '20px' }}>{num}</button>) : (<button onClick={openSidebar} id='closebtn' className='e' style={{ fontSize: '30px', textDecoration: 'none', backgroundColor: 'transparent', position: 'relative', left: '204%', marginTop: '20px' }}>{num}</button>)}
+                                        </>
+
+                                    )
+
+
+
+                                        :
+
+                                        <>
+                                            <img style={{ height: '50px', width: '50px', marginLeft: '215.4%', marginTop: '5.8%' }} src="https://www.kfcpakistan.com/static/media/bucket-filled.d2ad11819eca0f28a8ac.svg" alt="" />
+                                            {num ? (<button onClick={openSidebar} id='closebtn' className='e' style={{ textDecoration: 'none', backgroundColor: 'transparent', position: 'relative', right: '55px', marginTop: '24px' }}>{num}</button>) : (<button onClick={openSidebar} id='closebtn' className='e' style={{ textDecoration: 'none', backgroundColor: 'transparent', position: 'relative', left: '204%', marginTop: '20px' }}>{num}</button>)}
+
+                                        </>
+
+                        }
+
+
+
+                        <div className={isOwof ? 'collapse navbar-collapse i1024' : isOffz ? 'collapse navbar-collapse i1440' : isOntz ? 'collapse navbar-collapse i1920' : "collapse navbar-collapse i"} id="navbarNav">
 
                             <ul className="navbar-nav">
                                 <li className="nav-item">
@@ -99,34 +161,48 @@ export default function NavBar(props) {
                             </ul>
 
                         </div>
+
                     </div>
                 </nav>
             </div>
 
+
+
+
+
+
             <div ref={Ref}>
+
                 <section className='overlay' id='nav' >
+
                     <div style={{ display: 'flex' }}>
-                        <div style={{ position: 'fixed', backgroundColor: 'black', width: '29%', height: '110px', }}>
 
-                            <button className='e1' style={{ textDecoration: 'none', backgroundColor: 'transparent', border: 'none', color: 'white', marginTop: '24px', marginLeft: '10px' }} >{props.num}</button>
+                        <div className={isOwof ? 'SBH1024' : isOffz ? 'SBH1440' : isOntz ? 'SBH1920' : 'SBH'}>
 
-                            <h3 style={{ fontSize: '1.5rem', marginTop: '24px', color: 'white', position: 'absolute', top: '8px', left: '63px' }}>Your Bucket</h3>
+                            <button className={isOwof ? 'e11024' : isOffz ? 'e11440' : isOntz ? 'e11920' : 'e1'} >{props.num}</button>
 
-                            {num >= 1 ? <div style={{ color: 'white', fontSize: '23px', fontWeight: 'bold', position: 'absolute', top: '8px', right: '40px', marginTop: '22px' }}>Rs {itemPrice}</div> : ''}
+                            <div className={isOwof ? 'SBN1024' : isOffz ? 'SBN1440' : isOntz ? 'SBN1920' : 'SBN'}>Your Bucket</div>
 
-                            <button style={{ marginTop: '24px', position: 'absolute', right: '0', top: '10px', color: 'white', fontWeight: '200px', border: 'none' }} className='closebtn' onClick={closeSideBar} ><i className="bi bi-x-lg"></i></button>
+                            {num >= 1 ? <div className={isOwof ? 'SBC1024' : isOffz ? 'SBC1440' : isOntz ? 'SBC1920' : 'SBC'}>Rs {itemPrice}</div> : ''}
+
+                            <button className={isOwof ? 'closebtn1024 SBCL1024' : isOffz ? 'closebtn1440 SBCL1440' : isOntz ? 'closebtn1920 SBCL1920' : 'closebtn SBCL'} onClick={closeSideBar} ><i className="bi bi-x-lg"></i></button>
+                            {
+                                num >= 1 ?
+                                    <div className={isOwof ? 'viewB1024' : isOffz ? 'viewB1440' : isOffz ? 'viewB1440' : isOntz ? 'viewB1920' : 'viewB'}>
+                                        <Link className={isOwof ? 'zxc1024' : isOffz ? 'zxc1440' : isOffz ? 'zxc1440' : isOntz ? 'zxc1920' : 'zxc'} onClick={closeSideBar} to='/Bucket'>View Bucket</Link>
+                                    </div> : ''
+                            }
                         </div>
+
 
                         <SideBar incre={incre} decre={decre} remove={remove} Num={Num} onRemove={onRemove} Add={Add} />
 
-                        {
-                            num >= 1 ?
-                                <div style={{ backgroundColor: 'black', width: '29%', height: '109px', zIndex: '1300', position: 'fixed', bottom: '0' }}>
-                                    <Link className='zxc' style={{ fontWeight: 'bold' }} onClick={closeSideBar} to='/Bucket'>View Bucket</Link>
-                                </div> : ''
-                        }
+
+
                     </div>
+
                 </section>
+
             </div>
 
         </>

@@ -4,7 +4,7 @@ const data9 = {
     items9:[
         {
             id:'8',
-            name:'Krunch Burger + Drink',
+            name:'Krunch Drink',
             price:340,
             image:data,
             link:'/KrunchBurgerDrink',

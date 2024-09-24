@@ -9,386 +9,116 @@ import everyday from './EverydayValueH.png';
 import alaCarte from './AlaCarteComboH.png';
 import sharing from './SharingH.png';
 import Bev from './SnackNBevragesH.png';
-import { useMediaQuery } from 'react-responsive';
-
-
+import { Box } from '@mui/material';
 
 export default function Homepage(props) {
   const { items6, items7, items10, items11 } = props;
 
-  const isOwof = useMediaQuery({ query: '(max-width: 1024px)' });
-  const isOffz = useMediaQuery({ query: '(max-width: 1440px)' });
-  const isOntz = useMediaQuery({ query: '(max-width: 1920px)' });
 
+  const cate = {
+    textDecoration: 'none',
+    color: 'white',
+    textAlign: 'center'
+  }
 
   return (
-
     <>
 
+      <Box sx={{ display: { xs: 'none', sm: 'none', md: 'block' } }}>
+        <Slider />
+      </Box>
 
 
-      <Slider />
 
-      <div className={isOwof ? 'h1024' : isOffz ? 'h1440' : isOntz ? 'h11920' : 'h'}>
+      <Box sx={{marginTop:{xs:'1em',sm:'1em',md:'12em',lg:'15em',xl:'15em'}}} className="hh">
+        <h1>Browse Categories</h1>
+      </Box>
 
 
-        {
-          isOwof ? (
-            <>
 
-              <p style={{ fontSize: '25px', marginLeft: '2%', marginTop: '30%' }}>Browse Categories</p>
-              <div className='brL1024'></div>
-            </>
+      <div className="t">
 
-          )
+        <div className="card yq">
 
-            : isOffz ? (
-              <>
-
-                <div style={{ fontSize: '40px',marginLeft: '2%', marginTop: '15%' }}>Browse Categories</div>
-                <div className='brL1440' ></div>
-              </>
-
-            )
-
-
-              : isOntz ? (
-                <>
-
-                  <div style={{ fontSize: '45px', marginLeft: '2%', marginTop: '5%' }}>Browse Categories</div>
-                  <div className='brL1920' ></div>
-                </>
-
-              )
-
-                :
-                <>
-
-                  <p>Browse Categories</p>
-                  <div className='brL'></div>
-                </>
-
-        }
-
-
-      </div>
-
-
-
-
-      <div className={isOwof ? 't1024' : isOffz ? 't1440' : isOntz ? 't1920' : 't'}>
-
-
-        <div className={isOwof ? 'yq1024' : isOffz ? 'yq1440' : isOntz ? 'yq1920' : 'yq'}>
-
-          <Link className="nav-link active" aria-current="page" to="/a1">
-
-            {
-              isOwof ? (
-                <>
-
-                  <img style={{ height: '5%', width: '70%', marginLeft: '20px', marginTop: '15%' }} src={everyday} alt="" />
-                  <div style={{ marginLeft: '10%', fontSize: '1rem', width: '100%' }}>Every Day Value</div>
-
-                </>
-
-              )
-
-
-                : isOffz ? (
-                  <>
-
-                    <img style={{ height: '5%', width: '70%', marginLeft: '15%', marginTop: '15%' }} src={everyday} alt="" />
-                    <div style={{ marginLeft: '20%', fontSize: '1.5rem', width: '100%' }}>Every Day Value</div>
-
-                  </>
-
-                )
-
-
-
-                  : isOntz ? (
-                    <>
-
-                      <img style={{ height: '5%', width: '70%', marginLeft: '15%', marginTop: '5%' }} src={everyday} alt="" />
-                      <div style={{ marginLeft: '20%', fontSize: '2rem', width: '100%' }}>Every Day Value</div>
-
-                    </>
-
-                  )
-
-                    :
-                    (
-                      <>
-                        <img style={{ height: '5%', width: '70%', marginLeft: '30px' }} src={everyday} alt="" />
-                        <div style={{ marginLeft: '45px' }}>Every Day Value</div>
-                      </>
-
-                    )
-            }
-
-
-          </Link>
-
-
-        </div>
-
-
-
-        <div className={isOwof ? 'yq1024' : isOffz ? 'yq1440' : isOntz ? 'yq1920' : 'yq'}>
-
-          <Link className="nav-link active" aria-current="page" to="/b1">
-
-            {
-              isOwof ? (
-                <>
-
-                  <img style={{ height: '5%', width: '70%', marginLeft: '20px', marginTop: '15%' }} src={alaCarte} alt="" />
-                  <div style={{ marginLeft: '5%', fontSize: '1rem', width: '100%' }}>Ala Carte Combo</div>
-
-                </>
-
-              )
-
-
-                : isOffz ? (
-                  <>
-
-                    <img style={{ height: '5%', width: '70%', marginLeft: '15%', marginTop: '15%' }} src={alaCarte} alt="" />
-                    <div style={{ marginLeft: '15%', fontSize: '1.5rem', width: '100%' }}>Ala Carte Combo</div>
-
-                  </>
-
-                )
-
-
-
-                  : isOntz ? (
-                    <>
-
-                      <img style={{ height: '5%', width: '70%', marginLeft: '15%', marginTop: '5%' }} src={alaCarte} alt="" />
-                      <div style={{ marginLeft: '20%', fontSize: '2rem', width: '100%' }}>Ala Carte Combo</div>
-
-                    </>
-
-                  )
-
-                    :
-                    (
-                      <>
-                        <img style={{ height: '5%', width: '70%', marginLeft: '30px' }} src={everyday} alt="" />
-                        <div style={{ marginLeft: '45px' }}>Ala Carte Combo</div>
-                      </>
-
-                    )
-            }
-
-
+          <Link to="/a1" style={cate}>
+            
+            <div className="card-body">
+              <img src={everyday} className="card-img-top" alt="..." />
+            </div> <h4>Everyday Value</h4>
+          
           </Link>
 
         </div>
 
 
 
-        <div className={isOwof ? 'yq1024' : isOffz ? 'yq1440' : isOntz ? 'yq1920' : 'yq'}>
 
-          <Link className="nav-link active" aria-current="page" to="/d1">
+        <div className="card yq">
 
-            {
-              isOwof ? (
-                <>
-
-                  <img style={{ height: '5%', width: '70%', marginLeft: '20px', marginTop: '15%' }} src={sharing} alt="" />
-                  <div style={{ marginLeft: '30%', fontSize: '1rem', width: '100%' }}>Sharing</div>
-
-                </>
-
-              )
-
-
-                : isOffz ? (
-                  <>
-
-                    <img style={{ height: '5%', width: '70%', marginLeft: '15%', marginTop: '15%' }} src={sharing} alt="" />
-                    <div style={{ marginLeft: '35%', fontSize: '1.5rem', width: '100%' }}>Sharing</div>
-
-                  </>
-
-                )
-
-
-
-                  : isOntz ? (
-                    <>
-
-                      <img style={{ height: '5%', width: '70%', marginLeft: '15%', marginTop: '5%' }} src={sharing} alt="" />
-                      <div style={{ marginLeft: '20%', fontSize: '2rem', width: '100%' }}>sharing</div>
-
-                    </>
-
-                  )
-
-
-
-                    :
-                    (
-                      <>
-                        <img style={{ height: '5%', width: '70%', marginLeft: '30px' }} src={everyday} alt="" />
-                        <div style={{ marginLeft: '45px' }}>Sharing</div>
-                      </>
-
-                    )
-            }
-
-
+          <Link to="/b1" style={cate}>
+            <div className="card-body">
+              <img src={alaCarte} className="card-img-top" alt="..." />
+            </div><h4>Ala Carte Combo</h4>
           </Link>
 
         </div>
 
 
 
-        <div className={isOwof ? 'yq1024' : isOffz ? 'yq1440' : isOntz ? 'yq1920' : 'yq'}>
+        <div className="card yq" >
 
-          <Link className="nav-link active" aria-current="page" to="/e1">
-
-            {
-              isOwof ? (
-                <>
-
-                  <img style={{ height: '5%', width: '70%', marginLeft: '20px', marginTop: '15%' }} src={Bev} alt="" />
-                  <div style={{ marginLeft: '5%', fontSize: '1rem', width: '100%' }}>Snacks & Beverges </div>
-
-                </>
-
-              )
-
-
-                : isOffz ? (
-                  <>
-
-                    <img style={{ height: '5%', width: '70%', marginLeft: '15%', marginTop: '15%' }} src={Bev} alt="" />
-                    <div style={{ marginLeft: '12%', fontSize: '1.5rem', width: '100%' }}>Snacks & Beverages</div>
-
-                  </>
-
-                )
-
-
-                  : isOntz ? (
-                    <>
-
-                      <img style={{ height: '5%', width: '70%', marginLeft: '15%', marginTop: '5%' }} src={Bev} alt="" />
-                      <div style={{ marginLeft: '20%', fontSize: '2rem', width: '100%' }}>Snacks & Beverages</div>
-
-                    </>
-
-                  )
-
-
-                    :
-                    (
-                      <>
-                        <img style={{ height: '5%', width: '70%', marginLeft: '30px' }} src={everyday} alt="" />
-                        <div style={{ marginLeft: '45px' }}>Snacks & Beverges</div>
-                      </>
-
-                    )
-            }
-
-
+          <Link to="/d1" style={cate}>
+            
+            <div className="card-body">
+              <img src={sharing} className="card-img-top" alt="..." />
+            </div> <h4>Sharing</h4>
+          
           </Link>
 
+        </div>
+
+
+
+
+        <div className="card yq">
+         
+          <Link to="/e1" style={cate}>
+           
+            <div className="card-body">
+              <img src={Bev} className="card-img-top" alt="..." />
+            </div> <h4>Snacks & Beverages</h4>
+          
+          </Link>
         </div>
 
       </div>
 
 
-
-
-      <div className={isOwof ? 'h1024' : isOffz ? 'h1440' : isOntz ? 'h1920' : 'h'}>
-
-
-        {
-          isOwof ? (
-            <>
-
-              <p >Top Selling</p>
-              <div className='tsL1024'></div>
-            </>
-
-          )
-
-            : isOffz ? (
-              <>
-
-                <div style={{ fontSize: '40px', marginBottom: '1%', marginLeft: '1%' }}>Top Selling</div>
-                <div className='tsL1440' ></div>
-              </>
-
-            )
+      <Box className="h">
+        <h1>Top Selling</h1>
+      </Box>
 
 
 
-              : isOntz ? (
-                <>
+      <div className="x">
+        {items6.map((item) => (
+          <KBPage key={item.id} item={item} Add={props.Add} />
+        ))}
 
-                  <div style={{ fontSize: '45px', marginLeft: '2%' }}>Top Selling</div>
-                  <div className='tsL1920' ></div>
-                </>
+        {items7.map((item) => (
+          <SpicePage key={item.id} item={item} Add={props.Add} />
+        ))}
 
-              )
+        {items10.map((item) => (
+          <CrispyDuoPage key={item.id} item={item} Add={props.Add} />
+        ))}
 
-
-                :
-                <>
-
-                  <p>Top Selling</p>
-                  <div className='tsL'></div>
-                </>
-
-        }
-
-
-      </div>
-
-
-
-      <div className={isOwof ? 'x1024' : isOffz ? 'x1440' : isOntz ? 'x1920' : 'x'}>
-
-        {
-          items6.map((item) => {
-            return <KBPage key={item.id} item={item} Add={props.Add} />
-
-          })
-        }
-
-        {
-          items7.map((item) => {
-            return <SpicePage key={item.id} item={item} Add={props.Add} />
-
-          })
-        }
-
-        {
-          items10.map((item) => {
-            return <CrispyDuoPage key={item.id} item={item} Add={props.Add} />
-
-          })
-        }
-
-        {
-          items11.map((item) => {
-            return <BonelessPage key={item.id} item={item} Add={props.Add} />
-
-          })
-        }
+        {items11.map((item) => (
+          <BonelessPage key={item.id} item={item} Add={props.Add} />
+        ))}
       </div>
 
 
     </>
-  )
-
-
+  );
 }
-
-

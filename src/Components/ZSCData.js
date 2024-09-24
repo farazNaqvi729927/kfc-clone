@@ -8,7 +8,7 @@ const data16 = {
             price: 780,
             image:shero,
             link:'/ZingerStackerCombo',
-            descp:'Stacker + 1 Regular fries+ 1 Regular drink + bjkbakjbwjbfkjqwf'
+            descp:'Stacker + 1 Regular fries+ 1 Regular drink + whatever the choice of nuggets you want my guy.vecdsa'
         }
     ]
 }

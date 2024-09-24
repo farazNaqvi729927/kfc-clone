@@ -6,7 +6,7 @@ const data6 = {
             name:'Krunch Burger',
             price: 250,
             image:pic,
-            descp:'Crunchy chicken fillet, spicy mayo, lettuce, sandwiched between a sesame seed bun',
+            descp:'Crunchy chicken fillet, spicy mayo, lettuce, sandwiched between a sesame seed bun.',
             link:'/krunchyBurger'
         }
     ]

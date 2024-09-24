@@ -8,7 +8,7 @@ const data9 = {
             price:340,
             image:data,
             link:'/KrunchBurgerDrink',
-            descp:'1 Krunch burger + 1 regularvbtnyrtbvsgbrvftrfvfvfvfvfbbbbbbbbbbbbbbbbb'
+            descp:'1 Krunch burger + 1 drink of your choice cuz you got the dawg in you my G'
         }
     ]
 }

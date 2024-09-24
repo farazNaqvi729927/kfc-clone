@@ -4,15 +4,11 @@ import slide2 from '../Components/SLIDER/Slide2.jpg';
 import slide3 from '../Components/SLIDER/Slide3.webp';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import { Container } from '@mui/material';
 
 
 
 export default function Slider() {
-    const style = {
-        borderRadius: '5px',
-        height: '780px',
-        marginTop: '20px',
-    };
 
     useEffect(() => {
         AOS.init();
@@ -23,21 +19,23 @@ export default function Slider() {
         }
     }, []);
 
+    
+
     return (
-        <div className='g'>
+        <Container className='g'>
             <div id="carouselExampleSlidesOnly" className="carousel slide" data-bs-ride="carousel">
                 <div className="carousel-inner">
                     <div className="carousel-item active">
-                        <img style={style} src={slide1} className="d-block w-100" alt="Slide 1" />
+                        <img src={slide1} className="d-block w-100" alt="Slide 1" />
                     </div>
                     <div className="carousel-item">
-                        <img style={style} src={slide2} className="d-block w-100" alt="Slide 2" />
+                        <img src={slide2} className="d-block w-100" alt="Slide 2" />
                     </div>
                     <div className="carousel-item">
-                        <img style={style} src={slide3} className="d-block w-100" alt="Slide 3" />
+                        <img src={slide3} className="d-block w-100" alt="Slide 3" />
                     </div>
                 </div>
             </div>
-        </div>
+        </Container>
     );
 }

@@ -8,7 +8,7 @@ const data14 = {
             price: 380,
             image: t,
             link: '/Twister',
-            descp: 'Tender chicken strips, black pepper mayo, diced tomatoes and lettuce- wrapped in a tortilla'
+            descp: 'Tender chicken strips, black pepper mayo, diced tomatoes and lettuce- wrapped in a tortilla. Tender chicken strips, black pepper mayo.'
         }
     ]
 }

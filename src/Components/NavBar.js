@@ -1,210 +1,215 @@
-import React, { useRef, useEffect, useState } from 'react'
-import { Link } from 'react-router-dom';
-import Kfc from './logo.png'
+import React, { useState } from "react";
+import { AppBar, Box, Button, Container, Toolbar, styled, IconButton, Menu, MenuItem, Drawer } from "@mui/material";
+import MenuIcon from '@mui/icons-material/Menu';
+import kfc from './logo.png';
+import { Link } from "react-router-dom";
 import SideBar from './SideBar';
-// import fried from '../Components/fried.png'
-import { useMediaQuery } from 'react-responsive';
+
+const StyledToolbar = styled(Toolbar)(({ theme }) => ({
+  display: "flex",
+  justifyContent: "space-between",
+  alignItems: "center",
+  marginTop: '0.5em'
+}));
 
 
 
-export default function NavBar(props) {
-
-    const isOwof = useMediaQuery({ query: '(max-width: 1024px)' });
-    const isOffz = useMediaQuery({ query: '(max-width: 1440px)' });
-    const isOntz = useMediaQuery({ query: '(max-width: 1920px)' });
-
-
-    const [disable, setDisable] = useState(false)
-    const Ref = useRef(null)
-    const pageRef = useRef(null)
-    const { remove, num, Num, itemPrice, onRemove, Add, incre, decre } = props
+const MenuBox = styled(Box)(({ theme }) => ({
+  display: "flex",
+  gap: "50px",
+  [theme.breakpoints.down('md')]: {
+    display: "none"
+  },
+}));
 
 
-    const hideBtn = () => {
-        document.getElementById('q').style.display = 'none';
+
+
+
+const Navbar = (props) => {
+  const { remove, num, Num, itemPrice, onRemove, Add, incre, decre } = props;
+
+  const [drawerOpen, setDrawerOpen] = useState(false);
+  const [anchorEl, setAnchorEl] = useState(null);
+  const isMenuOpen = Boolean(anchorEl);
+
+
+  const handleMenuOpen = (event) => {
+    setAnchorEl(event.currentTarget);
+  };
+
+
+  const handleMenuClose = () => {
+    setAnchorEl(null);
+  };
+
+
+
+  // Functions to control the side drawer
+  const toggleDrawer = (open) => (event) => {
+    if (event.type === 'keydown' && (event.key === 'Tab' || event.key === 'Shift')) {
+      return;
     }
+    setDrawerOpen(open);
+  };
 
-    const showBtn = () => {
-        document.getElementById('q').style.display = 'flex';
-    }
 
 
-    const openSidebar = (e) => {
-        document.getElementById('nav').style.width = '30%'
-        if (pageRef.current.contains(e.target)) {
-            document.getElementById('overlay').style.position = 'fixed'
-            document.getElementById('overlay').style.width = '100%'
-            document.getElementById('overlay').style.height = '100%'
-            document.getElementById('overlay').style.zIndex = '999'
-            document.body.style.overflowY = 'hidden'
-            setDisable(true)
-        }
-    }
+  // Content of the Drawer
+  const drawerList = (
 
-    const closeSideBar = (e) => {
-        document.getElementById('nav').style.width = '0%'
-        if (Ref.current.contains(e.target)) {
-            document.body.style.overflowY = 'visible'
-            document.getElementById('overlay').style.width = '0%'
-            document.getElementById('overlay').style.height = '0%'
-            document.getElementById('overlay').style.opacity = '10'
-            document.body.style.backgroundColor = 'black'
-            setDisable(false)
-        }
-    }
+    <Box sx={{ width: {xs:'300px',sm:'400px',md:'400px',lg:'400px',xl:'400px'}, height: '100%', padding: '1rem' }} role="presentation">
 
-    useEffect(() => {
-        const handler = (e) => {
-            if (!Ref.current.contains(e.target)) {
-                document.getElementById('nav').style.width = '0%'
-                document.body.style.overflow = 'visible'
-                document.getElementById('overlay').style.width = '0%'
-                document.getElementById('overlay').style.height = '0%'
-                document.getElementById('overlay').style.opacity = '10'
-                setDisable(false)
-            }
-        }
-        document.addEventListener('mousedown', handler)
-    }
-    )
+      <Box className='e1'>
 
-    const pointer = disable ? 'none' : 'auto'
+        <Box sx={{ fontSize: 'calc(1rem + 0.5vw)', fontWeight: 'bold' }}>{props.num}</Box>
+        <Box sx={{ fontSize: 'calc(1rem + 0.5vw)', fontWeight: 'bold' }}>Your Bucket</Box>
+        {num >= 1 ? <Box sx={{ fontSize: 'calc(1rem + 0.5vw)', fontWeight: 'bold' }} className='SBC'>Rs {itemPrice}</Box> : ''}
+        {/* <i className="bi bi-x-lg"></i> */}
 
-    return (
-        <>
+      </Box>
 
-            <div id='overlay' ref={pageRef}>
 
-                <nav id='NAV' style={{ height: '95px', pointerEvents: pointer, zIndex: '1200' }} className="navbar fixed-top navbar-expand-lg bg-black navbar-dark">
+      <SideBar incre={incre} decre={decre} remove={remove} Num={Num} onRemove={onRemove} Add={Add} />
 
-                    <div className='a'>
+      {num >= 1 ? <div className='viewB'><Link className='zxc' to='/Bucket'>Checkout</Link></div> : ''}
 
-                        {
-                            isOntz ? (
-                                <Link className="nav-link active" aria-current="page" to="/"><img style={{ height: '90%', width: '95px', marginLeft: '130px', position: 'absolute', top: '5%' }} src={Kfc} width='70px' alt="Kfc Rocks" /></Link>
+    </Box>
 
-                            )
+  );
 
-                                : (
-                                    <Link className="nav-link active" aria-current="page" to="/"><img style={{ position: 'absolute', left: '9%', top: '10%' }} src={Kfc} width='70px' alt="Kfc Rocks" /></Link>
 
-                                )
-                        }
 
 
-                        <div className={isOwof ? 'A1024' : isOffz ? 'A1440' : isOntz ? 'A1920' : 'A'}>
 
-                            <button onClick={showBtn} className={isOwof ? 'c1024' : isOffz ? 'c1440' : isOntz ? 'c1920' : 'c'}>
-                                <img style={{ backgroundColor: 'transparent' }} height={15} src="https://www.kfcpakistan.com/assets/images/channels/1.png" alt="" />
-                                Delivery
-                            </button>
+  return (
 
-                            <button onClick={hideBtn} className={isOwof ? 'c1024' : isOffz ? 'c1440' : isOntz ? 'c1920' : 'c'} >
-                                <img style={{ backgroundColor: 'transparent' }} height={18} src="https://www.kfcpakistan.com/assets/images/channels/2.png" alt="" />
-                                Pickup
-                            </button>
+    <AppBar sx={{ backgroundColor: 'black', alignItems: 'center' }} position="sticky">
 
-                        </div>
+      <Container>
 
+        <StyledToolbar>
 
-                        <button id='q' className={isOwof ? 'd1024' : isOffz ? 'd1440' : isOntz ? 'd1920' : 'd'}><i className="bi bi-geo-alt-fill"></i> Select Location</button>
+          <Link to='/'><img src={kfc} style={{ maxWidth: '75px' }} alt="KFC Logo" /></Link>
 
 
-                        {
-                            isOwof ? (
-                                <>
-                                    <img style={{ height: '50px', width: '50px', marginLeft: '83.6%', marginTop: '6.5%' }} src="https://www.kfcpakistan.com/static/media/bucket-filled.d2ad11819eca0f28a8ac.svg" alt="" />
-                                    {num ? (<button onClick={openSidebar} id='closebtn' className='e' style={{ textDecoration: 'none', backgroundColor: 'transparent', position: 'relative', left: '-12.5%', marginTop: '25px' }}>{num}</button>) : (<button onClick={openSidebar} id='closebtn' className='e' style={{ textDecoration: 'none', backgroundColor: 'transparent', position: 'relative', left: '-12.5%', marginTop: '25px' }}>{num}</button>)}
-                                </>
+          <MenuBox>
 
-                            )
+            <Box className='NBhover' sx={{ borderRadius: '0.2rem' }}>
+              <Button sx={{ color: 'white' }} href="a1">
+                Everyday Value
+              </Button>
+            </Box>
 
+            <Box className='NBhover' sx={{ borderRadius: '0.2rem' }}>
+              <Button sx={{ color: 'white' }} href="b1">
+                Ala Carte Combo
+              </Button>
+            </Box>
 
-                                : isOffz ? (
-                                    <>
-                                        <img style={{ position: 'absolute', left: '70%', top: '18%', height: '70px', width: '60px' }} src="https://www.kfcpakistan.com/static/media/bucket-filled.d2ad11819eca0f28a8ac.svg" alt="" />
-                                        {num ? (<button onClick={openSidebar} id='closebtn' className='e' style={{ textDecoration: 'none', backgroundColor: 'transparent', position: 'relative', left: '155%', marginTop: '17px', fontSize: '20px' }}>{num}</button>) : (<button onClick={openSidebar} id='closebtn' className='e' style={{ textDecoration: 'none', backgroundColor: 'transparent', position: 'relative', left: '155%', marginTop: '17px', fontSize: '20px' }}>{num}</button>)}
-                                    </>
+            <Box className='NBhover' sx={{ borderRadius: '0.2rem' }}>
+              <Button sx={{ color: 'white' }} href="d1">
+                Sharing
+              </Button>
+            </Box>
 
-                                )
+          </MenuBox>
 
 
 
-                                    : isOntz ? (
-                                        <>
-                                            <img style={{ position: 'absolute', left: '72%', top: '0%', height: '100%', width: '90px' }} src="https://www.kfcpakistan.com/static/media/bucket-filled.d2ad11819eca0f28a8ac.svg" alt="" />
-                                            {num ? (<button onClick={openSidebar} id='closebtn' className='e' style={{ fontSize: '30px', textDecoration: 'none', backgroundColor: 'transparent', position: 'relative', left: '204%', marginTop: '20px' }}>{num}</button>) : (<button onClick={openSidebar} id='closebtn' className='e' style={{ fontSize: '30px', textDecoration: 'none', backgroundColor: 'transparent', position: 'relative', left: '204%', marginTop: '20px' }}>{num}</button>)}
-                                        </>
+          <Box sx={{ display: 'flex' }}>
 
-                                    )
+            <Box>
 
+              <div style={{ position: 'relative', cursor: 'pointer' }} onClick={toggleDrawer(true)}>
 
+                <img style={{ height: '60px', width: '60px' }} src="https://www.kfcpakistan.com/static/media/bucket-filled.d2ad11819eca0f28a8ac.svg" alt="View Bucket" />
+                <Box sx={{ position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%, -50%)', fontSize: 'calc(1rem + 0.5vw)', fontWeight: 'bold', color: 'black', }} >
+                  {num}
+                </Box>
 
-                                        :
+              </div>
 
-                                        <>
-                                            <img style={{ height: '50px', width: '50px', marginLeft: '215.4%', marginTop: '5.8%' }} src="https://www.kfcpakistan.com/static/media/bucket-filled.d2ad11819eca0f28a8ac.svg" alt="" />
-                                            {num ? (<button onClick={openSidebar} id='closebtn' className='e' style={{ textDecoration: 'none', backgroundColor: 'transparent', position: 'relative', right: '55px', marginTop: '24px' }}>{num}</button>) : (<button onClick={openSidebar} id='closebtn' className='e' style={{ textDecoration: 'none', backgroundColor: 'transparent', position: 'relative', left: '204%', marginTop: '20px' }}>{num}</button>)}
+            </Box>
 
-                                        </>
 
-                        }
 
+            {/* <Typography sx={{ display: { xs: 'block', sm: 'block', md: 'none' } }} fontWeight='bold' fontSize='calc(1rem + 1vw)'>
+              Welcome!
+            </Typography> */}
 
+            <Box sx={{ marginTop: '1em', backgroundColor: '#E4002B', borderRadius: '0.2rem', height: '40px', display: { xs: 'none', sm: 'none', md: 'block' } }}>
+              <Button sx={{ color: 'white', alignItems: 'center' }} href="h">Login</Button>
+            </Box>
 
-                        <div className={isOwof ? 'collapse navbar-collapse i1024' : isOffz ? 'collapse navbar-collapse i1440' : isOntz ? 'collapse navbar-collapse i1920' : "collapse navbar-collapse i"} id="navbarNav">
 
-                            <ul className="navbar-nav">
-                                <li className="nav-item">
-                                    <Link className="nav-link active" aria-current="page" to="/h">Registration/SignUp</Link>
-                                </li>
-                            </ul>
+          </Box>
 
-                        </div>
 
-                    </div>
-                </nav>
-            </div>
 
+          <IconButton size="large" edge="start" color="inherit" aria-label="menu" sx={{ display: { xs: 'block', md: 'none' } }} onClick={handleMenuOpen}>
+            <MenuIcon />
+          </IconButton>
 
 
 
+          <Menu anchorEl={anchorEl} anchorOrigin={{ vertical: 'top', horizontal: 'right' }} keepMounted
+            transformOrigin={{ vertical: 'top', horizontal: 'right' }}
+            open={isMenuOpen}
+            onClose={handleMenuClose}
+            PaperProps={{
+              style: {
+                backgroundColor: '#2E2925', // Forcing the background color
+                color: 'white', // Forcing the text color
+              },
+            }}
+          >
 
+            <MenuItem onClick={handleMenuClose} >
+              <Link to="/" style={{ textDecoration: 'none', color: 'white' }}>Home</Link>
+            </MenuItem>
 
-            <div ref={Ref}>
 
-                <section className='overlay' id='nav' >
+            <MenuItem onClick={handleMenuClose} sx={{ marginTop: '0.5em' }}>
+              <Link to="/a1" style={{ textDecoration: 'none', color: 'white' }}>Everyday Value</Link>
+            </MenuItem>
 
-                    <div style={{ display: 'flex' }}>
 
-                        <div className={isOwof ? 'SBH1024' : isOffz ? 'SBH1440' : isOntz ? 'SBH1920' : 'SBH'}>
+            <MenuItem onClick={handleMenuClose} sx={{ marginTop: '0.5em' }}>
+              <Link to="/b1" style={{ textDecoration: 'none', color: 'white' }}>Ala Carte Combo</Link>
+            </MenuItem>
 
-                            <button className={isOwof ? 'e11024' : isOffz ? 'e11440' : isOntz ? 'e11920' : 'e1'} >{props.num}</button>
 
-                            <div className={isOwof ? 'SBN1024' : isOffz ? 'SBN1440' : isOntz ? 'SBN1920' : 'SBN'}>Your Bucket</div>
+            <MenuItem onClick={handleMenuClose} sx={{ marginTop: '0.5em' }}>
+              <Link to="/d1" style={{ textDecoration: 'none', color: 'white' }}>Sharing</Link>
+            </MenuItem>
 
-                            {num >= 1 ? <div className={isOwof ? 'SBC1024' : isOffz ? 'SBC1440' : isOntz ? 'SBC1920' : 'SBC'}>Rs {itemPrice}</div> : ''}
 
-                            <button className={isOwof ? 'closebtn1024 SBCL1024' : isOffz ? 'closebtn1440 SBCL1440' : isOntz ? 'closebtn1920 SBCL1920' : 'closebtn SBCL'} onClick={closeSideBar} ><i className="bi bi-x-lg"></i></button>
-                            {
-                                num >= 1 ?
-                                    <div className={isOwof ? 'viewB1024' : isOffz ? 'viewB1440' : isOffz ? 'viewB1440' : isOntz ? 'viewB1920' : 'viewB'}>
-                                        <Link className={isOwof ? 'zxc1024' : isOffz ? 'zxc1440' : isOffz ? 'zxc1440' : isOntz ? 'zxc1920' : 'zxc'} onClick={closeSideBar} to='/Bucket'>View Bucket</Link>
-                                    </div> : ''
-                            }
-                        </div>
+            <MenuItem onClick={handleMenuClose} sx={{ marginTop: '0.5em' }}>
+              <Link to="/h" style={{ textDecoration: 'none', color: 'white' }}>Sign in</Link>
+            </MenuItem>
 
 
-                        <SideBar incre={incre} decre={decre} remove={remove} Num={Num} onRemove={onRemove} Add={Add} />
+            <MenuItem onClick={handleMenuClose} sx={{ marginTop: '0.5em' }}>
+              <Link to="/Bucket" style={{ textDecoration: 'none', color: 'white' }}>Checkout</Link>
+            </MenuItem>
 
+          </Menu>
 
 
-                    </div>
 
-                </section>
+        </StyledToolbar>
 
-            </div>
+      </Container>
 
-        </>
-    )
-}
+
+
+      <Drawer anchor="right" open={drawerOpen} onClose={toggleDrawer(false)} PaperProps={{ sx: { backgroundColor: 'black', color: 'white', } }}>
+        {drawerList}
+      </Drawer>
+
+    </AppBar>
+  );
+};
+
+export default Navbar;

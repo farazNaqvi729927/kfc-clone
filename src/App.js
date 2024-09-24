@@ -48,6 +48,9 @@ import data16 from './Components/ZSCData';
 import data17 from './Components/KBurgerData';
 import { useState, useEffect } from 'react';
 import Bucket from './Components/Bucket';
+import Footer from './Components/Footer';
+
+
 
 function App() {
   const [num, setNum] = useState([])
@@ -186,6 +189,8 @@ function App() {
           <Route exact path='/CrispyDuoBox' element={<Duo incre={incre} decre={decre} count={count} Add={Add} items10={items10} />} />
           <Route exact path='/Bucket' element={<Bucket Num={num} num={num} itemPrice = {itemPrice} onRemove={onRemove} onremove={onremove} Add={Add} />} />
         </Routes>
+
+        <Footer/>
       </BrowserRouter>
     </div>
   );

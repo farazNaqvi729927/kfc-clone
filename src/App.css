@@ -1050,10 +1050,14 @@ span {
 }
 
 
-
+.NBhover{
+    padding: 0.5em;
+    font-size: large;
+}
 
 .NBhover:hover {
     background-color: #E4002B;
+    
 }
 
 

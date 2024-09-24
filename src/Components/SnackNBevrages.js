@@ -15,7 +15,7 @@ export default function SnackNBevrages(props) {
   return (
     <>
 
-      {/* <Box className='navbar fixed-top navbar-expand-lg bg-black navbar-dark'>
+      <Box className='navbar fixed-top navbar-expand-lg bg-black navbar-dark'>
 
         <Box className='a1'>
 
@@ -29,7 +29,7 @@ export default function SnackNBevrages(props) {
 
         </Box>
 
-      </Box> */}
+      </Box>
 
 
 

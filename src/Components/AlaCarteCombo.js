@@ -13,7 +13,7 @@ export default function AlaCarteCombo(props) {
     <>
       <Box className='navbar fixed-top navbar-expand-lg bg-black navbar-dark'>
 
-        {/* <Box className='a1'>
+        <Box className='a1'>
 
           <Link className="nav-link active a2" aria-current="page" to="/a1">Everyday Value</Link>
 
@@ -23,13 +23,13 @@ export default function AlaCarteCombo(props) {
 
           <Link className="nav-link active a2" aria-current="page" to="/e1">Snacks & Beverages</Link>
 
-        </Box> */}
+        </Box>
 
       </Box>
 
 
 
-      
+
 
       <div className='x'>
         {items14.map((item) => (

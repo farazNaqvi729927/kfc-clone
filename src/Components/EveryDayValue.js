@@ -13,7 +13,7 @@ export default function EverydayValue(props) {
 
     <>
       <Box className='navbar fixed-top navbar-expand-lg bg-black navbar-dark'>
-{/* 
+
         <Box className='a1'>
 
           <Link className="nav-link active a2 a3" aria-current="page" to="/a1">Everyday Value</Link>
@@ -24,7 +24,7 @@ export default function EverydayValue(props) {
 
           <Link className="nav-link active a2" aria-current="page" to="/e1">Snacks & Beverages</Link>
 
-        </Box> */}
+        </Box>
 
       </Box>
 

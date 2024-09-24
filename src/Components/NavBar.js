@@ -58,7 +58,7 @@ const Navbar = (props) => {
   // Content of the Drawer
   const drawerList = (
 
-    <Box sx={{ width: {xs:'300px',sm:'400px',md:'400px',lg:'400px',xl:'400px'}, height: '100%', padding: '1rem' }} role="presentation">
+    <Box sx={{ width: { xs: '300px', sm: '400px', md: '400px', lg: '400px', xl: '400px' }, height: '100%', padding: '1rem' }} role="presentation">
 
       <Box className='e1'>
 
@@ -95,23 +95,19 @@ const Navbar = (props) => {
 
           <MenuBox>
 
-            <Box className='NBhover' sx={{ borderRadius: '0.2rem' }}>
-              <Button sx={{ color: 'white' }} href="a1">
-                Everyday Value
-              </Button>
-            </Box>
+            <Link className='NBhover' style={{ color: 'white', textDecoration: 'none', borderRadius: '0.2rem' }} to="a1" >
+              Everyday Value
+            </Link>
 
-            <Box className='NBhover' sx={{ borderRadius: '0.2rem' }}>
-              <Button sx={{ color: 'white' }} href="b1">
-                Ala Carte Combo
-              </Button>
-            </Box>
 
-            <Box className='NBhover' sx={{ borderRadius: '0.2rem' }}>
-              <Button sx={{ color: 'white' }} href="d1">
-                Sharing
-              </Button>
-            </Box>
+            <Link className='NBhover' style={{ color: 'white', textDecoration: 'none', borderRadius: '0.2rem' }} to="b1" >
+              Ala Carte Combo
+            </Link>
+
+
+            <Link className='NBhover' style={{ color: 'white', textDecoration: 'none', borderRadius: '0.2rem' }} to="d1" >
+              Sharing
+            </Link>
 
           </MenuBox>
 
@@ -139,7 +135,7 @@ const Navbar = (props) => {
             </Typography> */}
 
             <Box sx={{ marginTop: '1em', backgroundColor: '#E4002B', borderRadius: '0.2rem', height: '40px', display: { xs: 'none', sm: 'none', md: 'block' } }}>
-              <Button sx={{ color: 'white', alignItems: 'center' }} href="h">Login</Button>
+              <Button sx={{ color: 'white', alignItems: 'center' }} to="h">Login</Button>
             </Box>
 
 

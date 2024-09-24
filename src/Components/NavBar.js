@@ -130,9 +130,6 @@ const Navbar = (props) => {
 
 
 
-            {/* <Typography sx={{ display: { xs: 'block', sm: 'block', md: 'none' } }} fontWeight='bold' fontSize='calc(1rem + 1vw)'>
-              Welcome!
-            </Typography> */}
 
             <Box sx={{ marginTop: '1em', backgroundColor: '#E4002B', borderRadius: '0.2rem', height: '40px', display: { xs: 'none', sm: 'none', md: 'block' } }}>
               <Button sx={{ color: 'white', alignItems: 'center' }} to="h">Login</Button>

@@ -350,7 +350,7 @@ span {
 .t {
     display: flex;
     flex-wrap: wrap;
-    margin-top: 1%;
+    margin-top: 2em;
     gap: 20px;
     cursor: pointer;
     justify-content: center;
@@ -377,7 +377,7 @@ span {
     height: 100%;
     width: 100%;
     justify-content: center;
-    margin-top: 10em;
+    margin-top: 2em;
 }
 
 

@@ -9,7 +9,7 @@ import kfc from './logo.png';
 export default function Footer() {
     return (
 
-        <Box sx={{ backgroundColor: '#1C1816', color: 'white', padding: '2em 0', marginTop: '10em',height:'100%' }}>
+        <Box sx={{ backgroundColor: '#1C1816', color: 'white', padding: '2em 0', marginTop: '10em',height:'100%',position:"sticky" }}>
 
             <Container>
 

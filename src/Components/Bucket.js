@@ -31,7 +31,7 @@ export default function Bucket(props) {
         </Box>
 
 
-        <Box sx={{display:{xs:'none',sm:'none',md:'flex'}}}>
+        <Box sx={{ display: { xs: 'none', sm: 'none', md: 'flex' } }}>
 
           <Box className='fl'></Box>
 
@@ -74,26 +74,24 @@ export default function Bucket(props) {
 
 
           <textarea style={{ border: 'none', width: '100%' }} onKeyDown={handler} minLength={0} className='qaq' rows="5" cols="38" />
-          <p style={{textAlign:'left'}}>Special Instructions (Optional)</p>
+          <p style={{ textAlign: 'left' }}>Special Instructions (Optional)</p>
 
 
 
-          <Box className='future'>
+          <Box style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
 
-            <input style={{ backgroundColor: '#1C1816', border: '2px solid #E4002B' }} className="form-check-input" type="checkbox" aria-label="..." />
-            <p>Save For Future</p>
-            <p style={{ marginLeft: '45%' }}>{limit}/200</p>
+            <Box style={{ display: 'flex', alignItems: 'center' }}>
 
+              <input style={{ backgroundColor: '#1C1816', border: '2px solid #E4002B', marginRight: '8px' }} className="form-check-input"  type="checkbox" aria-label="..."/>
+              
+              <Box>Save For Future</Box>
+
+            </Box>
+
+            <div>{limit}/200</div>
           </Box>
 
 
-          {/* <Link className='done' to='/h'>
-
-            <Box style={{ textAlign: 'center', height: '50px', width: '100%', border: '2px solid white', borderRadius: '6px', padding: '10px', cursor: 'pointer' }}>
-              Done
-            </Box>
-
-          </Link> */}
 
 
           <Link className='cOut' to='/h'>

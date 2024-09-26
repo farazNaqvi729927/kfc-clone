@@ -30,7 +30,7 @@ export default function Homepage(props) {
 
 
 
-      <Box sx={{marginTop:{xs:'1em',sm:'1em',md:'12em',lg:'15em',xl:'15em'}}} className="hh">
+      <Box sx={{ marginTop: { xs: '1em', sm: '1em', md: '12em', lg: '15em', xl: '15em' } }} className="hh">
         <h1>Browse Categories</h1>
       </Box>
 
@@ -38,14 +38,15 @@ export default function Homepage(props) {
 
       <div className="t">
 
+
         <div className="card yq">
 
           <Link to="/a1" style={cate}>
-            
+
             <div className="card-body">
               <img src={everyday} className="card-img-top" alt="..." />
             </div> <h4>Everyday Value</h4>
-          
+
           </Link>
 
         </div>
@@ -68,11 +69,11 @@ export default function Homepage(props) {
         <div className="card yq" >
 
           <Link to="/d1" style={cate}>
-            
+
             <div className="card-body">
               <img src={sharing} className="card-img-top" alt="..." />
             </div> <h4>Sharing</h4>
-          
+
           </Link>
 
         </div>
@@ -81,17 +82,21 @@ export default function Homepage(props) {
 
 
         <div className="card yq">
-         
+
           <Link to="/e1" style={cate}>
-           
+
             <div className="card-body">
               <img src={Bev} className="card-img-top" alt="..." />
             </div> <h4>Snacks & Beverages</h4>
-          
+
           </Link>
         </div>
 
+
       </div>
+
+
+
 
 
       <Box className="h">
@@ -100,7 +105,7 @@ export default function Homepage(props) {
 
 
 
-      <div className="x">
+      <div className="xx">
         {items6.map((item) => (
           <KBPage key={item.id} item={item} Add={props.Add} />
         ))}

@@ -1,16 +1,16 @@
 import { Box, Container } from '@mui/material'
 import React from 'react'
-import { Link } from 'react-router-dom'
 
 export default function KrunchBurger(props) {
 
   const { items6, Add } = props
 
   return (
-    <div>
+
+    <Container>
       <Box style={{ zIndex: '1' }} className='navbar fixed-top navbar-expand-lg bg-black navbar-dark'>
 
-        <Box className='a1'>
+        {/* <Box className='a1'>
 
           <Link className="nav-link active a2 a3" aria-current="page" to="/a1">Everyday Value</Link>
 
@@ -20,43 +20,55 @@ export default function KrunchBurger(props) {
 
           <Link className="nav-link active a2" aria-current="page" to="/e1">Snacks & Beverages</Link>
 
-        </Box>
+        </Box> */}
 
       </Box>
 
+
+      <h2 style={{ color: 'white', textAlign: 'center', marginTop: '2em', fontWeight: 'bold' }}>Everyday Value</h2>
+
+
+
       {items6.map((x) => (
 
-        <div key={x.id} className='cb'>
+        <Box key={x.id} className='cb3'>
 
-          <div>
+          <Box>
             <img style={{ maxWidth: '400px' }} src={x.image} alt="" />
-          </div>
+          </Box>
 
 
-          <Box sx={{ padding: '2em',textAlign:'center',justifyContent:'center' }}>
+          <Box>
 
-            <h1 style={{ fontWeight: 'bold', lineHeight: '1.167' }}>{x.name}</h1>
+            <h2 >{x.name}</h2>
 
             <h5>Crunchy chicken fillet, spicy mayo, lettuce, sandwiched between a sesame seed bun</h5>
 
             <h2 style={{ fontWeight: 'bold' }}>Rs {x.price}</h2>
 
-            
-            <div style={{ display: 'flex', gap: '15px', marginTop: '15px' }}>
 
-              <button className='qqq' onClick={props.decre}>-</button>
-              <h5 style={{ marginTop: '10px', width: '20px', marginLeft: '5px' }}>{props.count}</h5>
-              {props.count < 10 ? <button className='qqq' onClick={props.incre}>+</button> : <button id='ppp' onClick={props.incre}>+</button>}
-              <button onClick={() => Add(x)} className='ee'>Add to bucket</button>
 
-            </div>
+            <Box style={{ display: 'flex', gap: '1em', marginTop: '1em', justifyContent: 'center' }}>
+
+
+              <button className='qqq' onClick={props.decre}>  <i style={{ color: 'white' }} className="bi bi-dash"></i> </button>
+
+              <h5 style={{ display: 'flex', alignItems: 'center' }}>{props.count}</h5>
+
+              {props.count < 10 ? <button className='qqq' onClick={props.incre}>  <i className="bi bi-plus"></i> </button>
+                : <button id='ppp' onClick={props.incre}>  <i className="bi bi-plus"></i> </button>}
+
+              <button onClick={() => Add(x)} className='ee'>Add to Bucket</button>
+
+            </Box>
+
 
           </Box>
 
-        </div>
+        </Box>
 
       ))}
 
-    </div>
+    </Container>
   )
 }

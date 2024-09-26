@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import KBurgerPage from './KBurgerPage';
 import TPage from './TPage';
 import ZBPage from './ZBPage';
@@ -13,7 +12,7 @@ export default function AlaCarteCombo(props) {
     <>
       <Box className='navbar fixed-top navbar-expand-lg bg-black navbar-dark'>
 
-        <Box className='a1'>
+        {/* <Box className='a1'>
 
           <Link className="nav-link active a2" aria-current="page" to="/a1">Everyday Value</Link>
 
@@ -23,12 +22,12 @@ export default function AlaCarteCombo(props) {
 
           <Link className="nav-link active a2" aria-current="page" to="/e1">Snacks & Beverages</Link>
 
-        </Box>
+        </Box> */}
 
       </Box>
 
 
-
+      <h2 style={{color:'white',textAlign:'center',marginTop:'2em'}}>AlaCarte Combo</h2>
 
 
       <div className='x'>

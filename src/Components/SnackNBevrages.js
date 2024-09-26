@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import BonelessPage from './BonelessPage';
 import CrispyDuoPage from './CrispyDuoPage';
 import CrispyPage from './CrispyPage';
@@ -17,7 +16,7 @@ export default function SnackNBevrages(props) {
 
       <Box className='navbar fixed-top navbar-expand-lg bg-black navbar-dark'>
 
-        <Box className='a1'>
+        {/* <Box className='a1'>
 
           <Link className="nav-link active a2" aria-current="page" to="/a1">Everyday Value</Link>
 
@@ -27,13 +26,13 @@ export default function SnackNBevrages(props) {
 
           <Link className="nav-link active a2 a3" aria-current="page" to="/e1">Snacks & Beverages</Link>
 
-        </Box>
+        </Box> */}
 
       </Box>
 
 
 
-
+      <h2 style={{color:'white',textAlign:'center',marginTop:'2em'}}>Snacks</h2>
 
       <div className='x'>
         {items12.map((item) => (

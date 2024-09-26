@@ -1,8 +1,8 @@
 import React, { useState } from "react";
-import { AppBar, Box, Button, Container, Toolbar, styled, IconButton, Menu, MenuItem, Drawer } from "@mui/material";
+import { AppBar, Box, Container, Toolbar, styled, IconButton, Menu, MenuItem, Drawer } from "@mui/material";
 import MenuIcon from '@mui/icons-material/Menu';
 import kfc from './logo.png';
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import SideBar from './SideBar';
 
 const StyledToolbar = styled(Toolbar)(({ theme }) => ({
@@ -15,8 +15,8 @@ const StyledToolbar = styled(Toolbar)(({ theme }) => ({
 
 
 const MenuBox = styled(Box)(({ theme }) => ({
-  display: "flex",
-  gap: "50px",
+
+
   [theme.breakpoints.down('md')]: {
     display: "none"
   },
@@ -65,7 +65,6 @@ const Navbar = (props) => {
         <Box sx={{ fontSize: 'calc(1rem + 0.5vw)', fontWeight: 'bold' }}>{props.num}</Box>
         <Box sx={{ fontSize: 'calc(1rem + 0.5vw)', fontWeight: 'bold' }}>Your Bucket</Box>
         {num >= 1 ? <Box sx={{ fontSize: 'calc(1rem + 0.5vw)', fontWeight: 'bold' }} className='SBC'>Rs {itemPrice}</Box> : ''}
-        {/* <i className="bi bi-x-lg"></i> */}
 
       </Box>
 
@@ -77,6 +76,40 @@ const Navbar = (props) => {
     </Box>
 
   );
+
+
+
+
+  const navStyle = {
+    textAlign: 'center',
+    borderRadius: '0.4rem',
+    width: '200px',
+    fontSize: 'calc(1rem + 0.2vw)',
+    color: 'white',
+    textDecoration: 'none',
+    alignItems: 'center',
+    marginRight: '1.5em',
+    justifyContent: 'center',
+    textTransform: 'uppercase',
+
+  };
+
+
+
+  const activeStyle = {
+    textAlign: 'center',
+    padding: '0.5em',
+    borderRadius: '0.4rem',
+    width: '200px',
+    fontSize: 'calc(1rem + 0.2vw)',
+    color: 'white',
+    textDecoration: 'none',
+    alignItems: 'center',
+    marginRight: '1.5em',
+    justifyContent: 'center',
+    textTransform: 'uppercase',
+    backgroundColor: '#E4002B'
+  };
 
 
 
@@ -95,19 +128,15 @@ const Navbar = (props) => {
 
           <MenuBox>
 
-            <Link className='NBhover' style={{ color: 'white', textDecoration: 'none', borderRadius: '0.2rem' }} to="a1" >
-              Everyday Value
-            </Link>
+            <NavLink to="/" style={({ isActive }) => (isActive ? activeStyle : navStyle)}>Home</NavLink>
 
+            <NavLink to="/a1" style={({ isActive }) => (isActive ? activeStyle : navStyle)}>Everyday Value</NavLink>
 
-            <Link className='NBhover' style={{ color: 'white', textDecoration: 'none', borderRadius: '0.2rem' }} to="b1" >
-              Ala Carte Combo
-            </Link>
+            <NavLink to="/b1" style={({ isActive }) => (isActive ? activeStyle : navStyle)}>Ala Carte & Combos</NavLink>
 
+            <NavLink to="/d1" style={({ isActive }) => (isActive ? activeStyle : navStyle)}>Sharing</NavLink>
 
-            <Link className='NBhover' style={{ color: 'white', textDecoration: 'none', borderRadius: '0.2rem' }} to="d1" >
-              Sharing
-            </Link>
+            <NavLink to="/e1" style={({ isActive }) => (isActive ? activeStyle : navStyle)}>Snacks</NavLink>
 
           </MenuBox>
 
@@ -131,9 +160,10 @@ const Navbar = (props) => {
 
 
 
-            <Box sx={{ marginTop: '1em', backgroundColor: '#E4002B', borderRadius: '0.2rem', height: '40px', display: { xs: 'none', sm: 'none', md: 'block' } }}>
-              <Button sx={{ color: 'white', alignItems: 'center' }} to="h">Login</Button>
+            <Box sx={{ padding: '0.5em', marginTop: '1em', backgroundColor: '#E4002B', borderRadius: '0.2rem', display: { xs: 'none', sm: 'none', md: 'block' } }}>
+              <Link to="/h" style={{ color: 'white', textDecoration: 'none', display: 'flex', alignItems: 'center' }}>Login</Link>
             </Box>
+
 
 
           </Box>
@@ -163,28 +193,28 @@ const Navbar = (props) => {
             </MenuItem>
 
 
-            <MenuItem onClick={handleMenuClose} sx={{ marginTop: '0.5em' }}>
+            <MenuItem onClick={handleMenuClose}>
               <Link to="/a1" style={{ textDecoration: 'none', color: 'white' }}>Everyday Value</Link>
             </MenuItem>
 
 
-            <MenuItem onClick={handleMenuClose} sx={{ marginTop: '0.5em' }}>
+            <MenuItem onClick={handleMenuClose}>
               <Link to="/b1" style={{ textDecoration: 'none', color: 'white' }}>Ala Carte Combo</Link>
             </MenuItem>
 
 
-            <MenuItem onClick={handleMenuClose} sx={{ marginTop: '0.5em' }}>
+            <MenuItem onClick={handleMenuClose}>
               <Link to="/d1" style={{ textDecoration: 'none', color: 'white' }}>Sharing</Link>
             </MenuItem>
 
 
-            <MenuItem onClick={handleMenuClose} sx={{ marginTop: '0.5em' }}>
-              <Link to="/h" style={{ textDecoration: 'none', color: 'white' }}>Sign in</Link>
+            <MenuItem onClick={handleMenuClose}>
+              <Link to="/e1" style={{ textDecoration: 'none', color: 'white' }}>Snacks</Link>
             </MenuItem>
 
 
-            <MenuItem onClick={handleMenuClose} sx={{ marginTop: '0.5em' }}>
-              <Link to="/Bucket" style={{ textDecoration: 'none', color: 'white' }}>Checkout</Link>
+            <MenuItem onClick={handleMenuClose}>
+              <Link to="/h" style={{ textDecoration: 'none', color: 'white' }}>Login</Link>
             </MenuItem>
 
           </Menu>

@@ -523,7 +523,7 @@ span {
 .ee {
     background-color: #E4002B;
     color: white;
-    font-size: clamp(2rem, 1.8rem + 1vw, 2rem);
+    font-size: clamp(1rem, 1.8rem + 1vw, 2rem);
     border: none;
     padding: 0.5em;
     border-radius: 0.3rem;
@@ -535,17 +535,19 @@ span {
 .qqq {
     background-color: #E4002B;
     color: rgb(255, 255, 255) !important;
-    padding: 0.5em;
     border: none;
     border-radius: 0.3rem;
+    font-size: clamp(1rem, 1.8rem + 1vw, 1.5rem);
+
 }
 
 #ppp {
     background-color: #E4002B;
     color: rgb(255, 255, 255) !important;
-    padding: 0.5em;
     border: none;
     border-radius: 0.3rem;
+    font-size: clamp(1rem, 1.8rem + 1vw, 1.5rem);
+    width: 100%;
 }
 
 
@@ -590,6 +592,7 @@ span {
     color: #E4002B;
     border: none;
     background-color: transparent;
+    font-size: clamp(1rem, 0.8rem + 1vw, 2rem);
 }
 
 
@@ -598,7 +601,7 @@ span {
     background-color: transparent;
     color: #E4002B;
     border: none;
-    font-size: clamp(1rem, 1.8rem + 1vw, 1.5rem);
+    font-size: clamp(1rem, 0.8rem + 1vw, 2rem);
 
 }
 
@@ -608,7 +611,7 @@ span {
     background-color: transparent;
     color: #E4002B;
     border: none;
-    font-size: clamp(1rem, 1.8rem + 1vw, 1.5rem);
+    font-size: clamp(1rem, 0.8rem + 1vw, 2rem);
 }
 
 
@@ -616,7 +619,7 @@ span {
     background-color: transparent;
     color: #E4002B;
     border: none;
-    font-size: clamp(1rem, 1.8rem + 1vw, 1.5rem);
+    font-size: clamp(1rem, 0.8rem + 1vw, 2rem);
 
 }
 
@@ -656,7 +659,7 @@ span {
 .zxc {
     text-decoration: none;
     color: white;
-    font-size: clamp(1rem, 1.8rem + 1vw, 1.5rem);
+    font-size: clamp(1rem, 1.8rem + 1vw, 2.5rem);
     font-weight: 500;
 }
 
@@ -801,21 +804,20 @@ span {
     align-items: center;
     flex-direction: column;
     gap: 0.5em;
+    
 }
 
 
 
-
-
-
 .yy {
-    padding: 1em;
+    padding: 3em;
     text-align: center;
     border-radius: 12px;
     background-color: #1C1816;
     filter: drop-shadow(0px 4px 33px rgba(228, 0, 43, 0.11));
     margin-top: 1%;
-    max-width: 350px;
+    width: clamp(470px, 50%, 1000px);
+    
 }
 
 
@@ -844,7 +846,7 @@ span {
     color: white;
     background-color: #E4002B;
     border-radius: 2px;
-    font-size: clamp(1rem, 1rem + 1vw, 1.5rem);
+    font-size: clamp(1rem, 1rem + 1vw, 1.6rem);
     padding: 0.5em;
     text-decoration: none;
 
@@ -937,7 +939,7 @@ span {
     font-weight: bold;
     line-height: 1.167;
     color: white;
-    
+
 }
 
 
@@ -969,7 +971,6 @@ span {
     display: flex;
     flex-direction: column;
     align-items: center;
-    position: relative;
     height: auto;
 }
 
@@ -1101,4 +1102,23 @@ span {
 .nbLink {
     font-size: clamp(1rem, 0.8rem + 1vw, 2rem);
 
+}
+
+
+
+h1 {
+    font-size: 2rem;
+    font-size: clamp(2rem, 1.6rem + 2vw, 4rem);
+}
+
+
+h2 {
+    font-size: 1rem;
+    font-size: clamp(1rem, 0.6rem + 2vw, 3rem);
+}
+
+
+h3 {
+    font-size: 1rem;
+    font-size: clamp(1rem, 0.8rem + 1vw, 2rem);
 }

@@ -29,47 +29,53 @@ export default function FFTHREE(props) {
 
 
 
-      <h2 style={{ color: 'white', textAlign: 'center', marginTop: '2em', fontWeight: 'bold' }}>Sharing</h2>
+      
 
 
 
       {items3.map((x) => (
 
-        <Box key={x.id} className='cb2'>
-
-          <Box>
-            <img style={{ maxWidth: '300px' }} src={x.image} alt="" />
-          </Box>
+        <>
+          <h2 style={{ color: 'white', textAlign: 'center', marginTop: '2em', fontWeight: 'bold' }}>Sharing</h2>
 
 
-          <Box>
+          <Box key={x.id} className='cb'>
 
-            <h2>{x.name}</h2>
-
-            <h5>Crunchy chicken fillet, spicy mayo, lettuce, sandwiched between a sesame seed bun</h5>
-
-            <h2 style={{ fontWeight: 'bold' }}>Rs {x.price}</h2>
-
-
-
-            <Box style={{ display: 'flex', gap: '1em', marginTop: '1em', justifyContent: 'center' }}>
-
-
-              <button className='qqq' onClick={props.decre}>  <i style={{ color: 'white' }} className="bi bi-dash"></i> </button>
-
-              <h5 style={{ display: 'flex', alignItems: 'center' }}>{props.count}</h5>
-
-              {props.count < 10 ? <button className='qqq' onClick={props.incre}>  <i className="bi bi-plus"></i> </button>
-                : <button id='ppp' onClick={props.incre}>  <i className="bi bi-plus"></i> </button>}
-
-              <button onClick={() => Add(x)} className='ee'>Add to Bucket</button>
-
+            <Box>
+              <img style={{ maxWidth: '400px' }} src={x.image} alt="" />
             </Box>
 
 
-          </Box>
+            <Box>
 
-        </Box>
+              <h2 >{x.name}</h2>
+
+
+              <h3 >Crunchy chicken fillet, spicy mayo, lettuce, sandwiched between a sesame seed bun</h3>
+
+              <h2 >Rs {x.price}</h2>
+
+
+
+              <Container style={{ display: 'flex', gap: '1em', marginTop: '1em', justifyContent: 'center', padding: '1em' }}>
+
+
+                <button className='qqq' onClick={props.decre}>  <i style={{ color: 'white' }} className="bi bi-dash"></i> </button>
+
+                <h5 style={{ display: 'flex', alignItems: 'center' }}>{props.count}</h5>
+
+                {props.count < 10 ? <button className='qqq' onClick={props.incre}>  <i className="bi bi-plus"></i> </button>
+                  : <button id='ppp' onClick={props.incre}>  <i className="bi bi-plus"></i> </button>}
+
+                <button onClick={() => Add(x)} className='ee'>Add to Bucket</button>
+
+              </Container>
+
+
+            </Box>
+
+          </Box>
+        </>
       ))}
     </Container>
   )

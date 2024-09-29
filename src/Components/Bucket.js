@@ -24,43 +24,9 @@ export default function Bucket(props) {
 
     <Container>
       <Container className='bTicks'>
-
-
         <Box>
           <h1 >Checkout Panel</h1>
         </Box>
-
-
-        <Box sx={{ display: { xs: 'none', sm: 'none', md: 'flex' } }}>
-
-          <Box className='fl'></Box>
-
-
-          <Box className='v1'>
-            <i style={{ marginLeft: '0.15em', fontSize: '30px' }} className="bi bi-check2"></i>
-            <p>Menu</p>
-          </Box>
-
-
-          <Box className='fl'></Box>
-
-
-          <Box className='v1'>
-            <i style={{ marginLeft: '0.15em', fontSize: '30px' }} className="bi bi-check2"></i>
-            <p>Bucket</p>
-          </Box>
-
-
-          <Box className='fl'></Box>
-
-
-          <Box className='v1' style={{ border: '2px solid white' }}>
-            <p style={{ marginLeft: '0.6em', fontSize: '20px', marginTop: '0.2em' }}>3</p>
-            <p style={{ marginLeft: '-0.7em', marginTop: '-0.5em' }}>Checkout</p>
-          </Box>
-
-        </Box>
-
 
       </Container>
 
@@ -74,7 +40,7 @@ export default function Bucket(props) {
 
 
           <textarea style={{ border: 'none', width: '100%' }} onKeyDown={handler} minLength={0} className='qaq' rows="5" cols="38" />
-          <p style={{ textAlign: 'left' }}>Special Instructions (Optional)</p>
+          <p style={{fontSize:'clamp(2rem, 1.8rem + 1vw, 2rem)', textAlign: 'left' }}>Special Instructions (Optional)</p>
 
 
 
@@ -84,11 +50,11 @@ export default function Bucket(props) {
 
               <input style={{ backgroundColor: '#1C1816', border: '2px solid #E4002B', marginRight: '8px' }} className="form-check-input" type="checkbox" aria-label="..." />
 
-              <Box>Save For Future</Box>
+              <Box sx={{fontSize:'clamp(2rem, 1.8rem + 1vw, 2rem)'}}>Save For Future</Box>
 
             </Box>
 
-            <div>{limit}/200</div>
+            <div style={{fontSize:'clamp(2rem, 1.8rem + 1vw, 2rem)'}}>{limit}/200</div>
           </Box>
 
 
@@ -96,8 +62,7 @@ export default function Bucket(props) {
 
           <Link className='cOut' to='/h'>
 
-            <Box
-              style={{ backgroundColor: '#E4002B', textAlign: 'center', height: '50px', width: '100%', border: 'none', borderRadius: '6px', padding: '13px', cursor: 'pointer', }} >
+            <Box style={{fontSize:'clamp(2rem, 1.8rem + 1vw, 2rem)', backgroundColor: '#E4002B', textAlign: 'center', border: 'none', borderRadius: '6px', padding: '13px', cursor: 'pointer', }} >
               Place Order
             </Box>
 

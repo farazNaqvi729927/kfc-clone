@@ -61,9 +61,9 @@ const Navbar = (props) => {
 
       <Box className='e1'>
 
-        <Box sx={{ fontSize: 'calc(1rem + 0.5vw)', fontWeight: 'bold' }}>{props.num}</Box>
-        <Box sx={{ fontSize: 'calc(1rem + 0.5vw)', fontWeight: 'bold' }}>Your Bucket</Box>
-        {num >= 1 ? <Box sx={{ fontSize: 'calc(1rem + 0.5vw)', fontWeight: 'bold' }} className='SBC'>Rs {itemPrice}</Box> : ''}
+        <Box sx={{ fontSize: 'clamp(1rem, 1rem + 1vw, 2.5rem)', fontWeight: 'bold' }}>{props.num}</Box>
+        <Box sx={{ fontSize: 'clamp(1rem, 1rem + 1vw, 2.5rem)', fontWeight: 'bold' }}>Your Bucket</Box>
+        {num >= 1 ? <Box sx={{ fontSize: 'clamp(1rem, 1rem + 1vw, 2.5rem)', fontWeight: 'bold' }} className='SBC'>Rs {itemPrice}</Box> : ''}
 
       </Box>
 

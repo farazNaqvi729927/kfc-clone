@@ -16,12 +16,12 @@ export default function SideBar(props) {
 
             <Box className='sbItem' >
 
-              <img style={{ maxWidth: '5rem', height: '90px' }} src={Item.image} alt={Item.name} />
+              <img style={{ maxWidth: '15rem', height: '90px' }} src={Item.image} alt={Item.name} />
 
 
               <Box sx={{ display: 'flex', flexDirection: 'column', marginLeft: '1rem', flex: '1' }}>
 
-                <Box sx={{ fontWeight: 'bold' }}>
+                <Box sx={{ fontSize:'clamp(1rem, 0.8rem + 1vw, 2rem)' }}>
                   {Item.name}
                 </Box>
 
@@ -48,7 +48,7 @@ export default function SideBar(props) {
                     )}
 
 
-                    <Box sx={{ color: 'white', fontWeight: 'bold', margin: '0 0.2em' }}>
+                    <Box sx={{fontSize:'clamp(1rem, 0.8rem + 1vw, 2rem)', color: 'white', fontWeight: 'bold', margin: '0 0.2em' }}>
                       {Item.qty}
                     </Box>
 
@@ -70,7 +70,7 @@ export default function SideBar(props) {
                   </Box>
 
 
-                  <Box sx={{ fontWeight: 'bold' }}>
+                  <Box sx={{fontSize:'clamp(1rem, 0.8rem + 1vw, 2rem)', fontWeight: 'bold' }}>
                     Rs {Item.qty * Item.price}
                   </Box>
 

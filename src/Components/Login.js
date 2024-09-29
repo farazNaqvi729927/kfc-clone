@@ -19,13 +19,13 @@ export default function Login() {
                         <form style={{ textAlign: 'center' }}>
                            
                             <Box className="mb-3">
-                                <label style={{ color: 'white', textAlign: 'center' }} htmlFor="exampleInputEmail1" className="form-label">Email address</label>
-                                <input type="email" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" />
+                                <label style={{ color: 'white', textAlign: 'center',fontSize:'clamp(1rem, 1.8rem + 1vw, 2rem)' }} htmlFor="exampleInputEmail1" className="form-label">Email address</label>
+                                <input style={{fontSize:'clamp(1rem, 1.8rem + 1vw, 2rem)' }} type="email" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" />
                             </Box>
 
                             <Box className="mb-3">
-                                <label style={{ color: 'white', textAlign: 'center' }} htmlFor="exampleInputPassword1" className="form-label">Password</label>
-                                <input type="password" className="form-control" id="exampleInputPassword1" />
+                                <label style={{ color: 'white', textAlign: 'center',fontSize:'clamp(1rem, 1.8rem + 1vw, 2rem)' }} htmlFor="exampleInputPassword1" className="form-label">Password</label>
+                                <input style={{fontSize:'clamp(1rem, 1.8rem + 1vw, 2rem)' }} type="password" className="form-control" id="exampleInputPassword1" />
                             </Box>
 
                             <button type="submit" className="l">Login</button>

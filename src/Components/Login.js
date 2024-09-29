@@ -13,7 +13,6 @@ export default function Login() {
                 <Box className='j'>
                     
                     <Box id='w'>
-                        <h2 style={{ color: 'white', textAlign: 'center' }}>Welcome!</h2>
 
                        
                         <form style={{ textAlign: 'center' }}>

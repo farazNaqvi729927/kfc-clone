@@ -35,7 +35,7 @@ export default function SideBar(props) {
 
                     {Item.qty < 2 ? (
 
-                      <button style={{ color: '#E4002B', border: 'none',backgroundColor:'transparent' }} onClick={() => onRemove(Item)}>
+                      <button className='delB' onClick={() => onRemove(Item)}>
                         <i className="bi bi-trash2"></i>
                       </button>
 

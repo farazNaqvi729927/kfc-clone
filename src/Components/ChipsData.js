@@ -8,7 +8,7 @@ const data7 = {
             price:250,
             image:rice,
             link:'/RiceNSpice',
-            descp:'Spiced, buttery rice with 6 pcs of Hot Shots topped with our signature Vietnamese sauce'
+            descp:'A hearty meal for the fam. It includes 2 Zinger burgers + 2 Krunch burgers + 4 pieces Hot and Crispy Chick...'
         }
     ]
 }

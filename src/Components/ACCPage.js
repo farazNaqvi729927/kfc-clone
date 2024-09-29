@@ -29,7 +29,7 @@ export default function ACCPage(props) {
                     </div>
                 </div>
             </Link>
-            <button onClick={() => props.Add(props.item)} id='four'>Add to bucket</button>
+            <button onClick={() => props.Add(props.item)} id='four'>Add to Bucket</button>
         </div>
     )
 }

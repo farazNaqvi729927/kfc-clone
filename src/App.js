@@ -40,18 +40,23 @@ import data1 from './Components/FF1Data';
 import data2 from './Components/FF2Data';
 import data3 from './Components/FF3Data';
 import data4 from './Components/ValueBucketData';
+
 import data6 from './Components/KBData';
 import data7 from './Components/ChipsData';
 import data8 from './Components/ZingData';
 import data9 from './Components/KBDData';
+
 import data10 from './Components/CrispyDuoData';
 import data11 from './Components/BonelessData';
 import data12 from './Components/CrispyData';
 import data13 from './Components/WowData';
+
 import data14 from './Components/TData';
 import data15 from './Components/ZBData';
 import data16 from './Components/ZSCData';
 import data17 from './Components/KBurgerData';
+
+
 import Bucket from './Components/Bucket';
 import Footer from './Components/Footer';
 

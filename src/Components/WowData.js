@@ -8,7 +8,7 @@ const data13 = {
             price: 850,
             image: shero,
             link:'/WowMealBox',
-            descp:'Feel good with 1 signature Zinger + 1 pc Hot & Crispy Chicken + 1 regular fries + 1 dri...'
+            descp:'A hearty meal for the fam. It includes 2 Zinger burgers + 2 Krunch burgers + 4 pieces Hot and Crispy Chick...'
         }
     ]
 }

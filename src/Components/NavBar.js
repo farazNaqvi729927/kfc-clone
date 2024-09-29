@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { AppBar, Box, Container, Toolbar, styled, IconButton, Menu, MenuItem, Drawer } from "@mui/material";
+import { AppBar, Box, Toolbar, styled, IconButton, Menu, MenuItem, Drawer } from "@mui/material";
 import MenuIcon from '@mui/icons-material/Menu';
 import kfc from './logo.png';
 import { Link, NavLink } from "react-router-dom";
@@ -15,8 +15,7 @@ const StyledToolbar = styled(Toolbar)(({ theme }) => ({
 
 
 const MenuBox = styled(Box)(({ theme }) => ({
-
-
+  display: 'flex', flexWrap: 'nowrap', alignItems: 'center',
   [theme.breakpoints.down('md')]: {
     display: "none"
   },
@@ -58,7 +57,7 @@ const Navbar = (props) => {
   // Content of the Drawer
   const drawerList = (
 
-    <Box sx={{ width: { xs: '300px', sm: '400px', md: '400px', lg: '400px', xl: '400px' }, height: '100%', padding: '1rem' }} role="presentation">
+    <Box sx={{ width: { xs: '350px', sm: '400px', md: '400px', lg: '400px', xl: '500px' }, height: '100%', padding: '1rem' }} role="presentation">
 
       <Box className='e1'>
 
@@ -83,32 +82,26 @@ const Navbar = (props) => {
   const navStyle = {
     textAlign: 'center',
     borderRadius: '0.4rem',
-    width: '200px',
-    fontSize: 'calc(1rem + 0.2vw)',
     color: 'white',
     textDecoration: 'none',
     alignItems: 'center',
     marginRight: '1.5em',
     justifyContent: 'center',
-    textTransform: 'uppercase',
-
   };
 
 
 
   const activeStyle = {
     textAlign: 'center',
-    padding: '0.5em',
     borderRadius: '0.4rem',
-    width: '200px',
-    fontSize: 'calc(1rem + 0.2vw)',
     color: 'white',
     textDecoration: 'none',
     alignItems: 'center',
     marginRight: '1.5em',
     justifyContent: 'center',
-    textTransform: 'uppercase',
-    backgroundColor: '#E4002B'
+    backgroundColor: '#E4002B',
+    padding: '0.3em',
+
   };
 
 
@@ -117,113 +110,110 @@ const Navbar = (props) => {
 
   return (
 
-    <AppBar sx={{ backgroundColor: 'black', alignItems: 'center' }} position="sticky">
-
-      <Container>
-
-        <StyledToolbar>
-
-          <Link to='/'><img src={kfc} style={{ maxWidth: '75px' }} alt="KFC Logo" /></Link>
-
-
-          <MenuBox>
-
-            <NavLink to="/" style={({ isActive }) => (isActive ? activeStyle : navStyle)}>Home</NavLink>
-
-            <NavLink to="/a1" style={({ isActive }) => (isActive ? activeStyle : navStyle)}>Everyday Value</NavLink>
-
-            <NavLink to="/b1" style={({ isActive }) => (isActive ? activeStyle : navStyle)}>Ala Carte & Combos</NavLink>
-
-            <NavLink to="/d1" style={({ isActive }) => (isActive ? activeStyle : navStyle)}>Sharing</NavLink>
-
-            <NavLink to="/e1" style={({ isActive }) => (isActive ? activeStyle : navStyle)}>Snacks</NavLink>
-
-          </MenuBox>
+    <AppBar sx={{ backgroundColor: 'black' }} position="sticky">
 
 
 
-          <Box sx={{ display: 'flex' }}>
+      <StyledToolbar>
 
-            <Box>
+        <Link to='/'>
+          <Box component="img" src={kfc} alt="KFC Logo" sx={{ maxWidth: { xs: '85px', sm: '85px', md: '90px', lg: '90px', xl: '140px' }, height: 'auto' }} />
+        </Link>
 
-              <div style={{ position: 'relative', cursor: 'pointer' }} onClick={toggleDrawer(true)}>
 
-                <img style={{ height: '60px', width: '60px' }} src="https://www.kfcpakistan.com/static/media/bucket-filled.d2ad11819eca0f28a8ac.svg" alt="View Bucket" />
-                <Box sx={{ position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%, -50%)', fontSize: 'calc(1rem + 0.5vw)', fontWeight: 'bold', color: 'black', }} >
-                  {num}
-                </Box>
+        <MenuBox>
 
-              </div>
+          <NavLink className='nbLink' to="/" style={({ isActive }) => (isActive ? activeStyle : navStyle)}>Home</NavLink>
 
-            </Box>
+          <NavLink className='nbLink' to="/h" style={({ isActive }) => (isActive ? activeStyle : navStyle)}>Login</NavLink>
+
+          <NavLink className='nbLink' to="/a1" style={({ isActive }) => (isActive ? activeStyle : navStyle)}>Everyday Value</NavLink>
+
+          <NavLink className='nbLink' to="/b1" style={({ isActive }) => (isActive ? activeStyle : navStyle)}>Ala Carte</NavLink>
+
+          <NavLink className='nbLink' to="/d1" style={({ isActive }) => (isActive ? activeStyle : navStyle)}>Sharing</NavLink>
+
+          <NavLink className='nbLink' to="/e1" style={({ isActive }) => (isActive ? activeStyle : navStyle)}>Snacks</NavLink>
+
+        </MenuBox>
 
 
 
 
-            <Box sx={{ padding: '0.5em', marginTop: '1em', backgroundColor: '#E4002B', borderRadius: '0.2rem', display: { xs: 'none', sm: 'none', md: 'block' } }}>
-              <Link to="/h" style={{ color: 'white', textDecoration: 'none', display: 'flex', alignItems: 'center' }}>Login</Link>
-            </Box>
+        <Box sx={{ display: 'flex' }}>
 
+          <Box>
 
+            <div style={{ position: 'relative', cursor: 'pointer' }} onClick={toggleDrawer(true)}>
+
+            <Box component="img" src="https://www.kfcpakistan.com/static/media/bucket-filled.d2ad11819eca0f28a8ac.svg" alt="KFC Logo" sx={{ width: '100%', maxWidth: { xs: '55px', sm: '55px', md: '55px', lg: '70px', xl: '100px' }, height: 'auto' }} />
+
+              <Box sx={{ position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%, -50%)', fontSize: { xs: '1.2rem', sm: '1.2rem', md: '1rem', lg: '1.5rem', xl: '2rem' }, fontWeight: 'bold', color: 'black', }} >
+                {num}
+              </Box>
+
+            </div>
 
           </Box>
 
-
-
-          <IconButton size="large" edge="start" color="inherit" aria-label="menu" sx={{ display: { xs: 'block', md: 'none' } }} onClick={handleMenuOpen}>
-            <MenuIcon />
-          </IconButton>
+        </Box>
 
 
 
-          <Menu anchorEl={anchorEl} anchorOrigin={{ vertical: 'top', horizontal: 'right' }} keepMounted
-            transformOrigin={{ vertical: 'top', horizontal: 'right' }}
-            open={isMenuOpen}
-            onClose={handleMenuClose}
-            PaperProps={{
-              style: {
-                backgroundColor: '#2E2925', // Forcing the background color
-                color: 'white', // Forcing the text color
-              },
-            }}
-          >
 
-            <MenuItem onClick={handleMenuClose} >
-              <Link to="/" style={{ textDecoration: 'none', color: 'white' }}>Home</Link>
-            </MenuItem>
-
-
-            <MenuItem onClick={handleMenuClose}>
-              <Link to="/a1" style={{ textDecoration: 'none', color: 'white' }}>Everyday Value</Link>
-            </MenuItem>
-
-
-            <MenuItem onClick={handleMenuClose}>
-              <Link to="/b1" style={{ textDecoration: 'none', color: 'white' }}>Ala Carte Combo</Link>
-            </MenuItem>
-
-
-            <MenuItem onClick={handleMenuClose}>
-              <Link to="/d1" style={{ textDecoration: 'none', color: 'white' }}>Sharing</Link>
-            </MenuItem>
-
-
-            <MenuItem onClick={handleMenuClose}>
-              <Link to="/e1" style={{ textDecoration: 'none', color: 'white' }}>Snacks</Link>
-            </MenuItem>
-
-
-            <MenuItem onClick={handleMenuClose}>
-              <Link to="/h" style={{ textDecoration: 'none', color: 'white' }}>Login</Link>
-            </MenuItem>
-
-          </Menu>
+        <IconButton size="large" edge="start" color="inherit" aria-label="menu" sx={{ display: { xs: 'block', md: 'none' } }} onClick={handleMenuOpen}>
+          <MenuIcon />
+        </IconButton>
 
 
 
-        </StyledToolbar>
+        <Menu anchorEl={anchorEl} anchorOrigin={{ vertical: 'top', horizontal: 'right' }} keepMounted
+          transformOrigin={{ vertical: 'top', horizontal: 'right' }}
+          open={isMenuOpen}
+          onClose={handleMenuClose}
+          PaperProps={{
+            style: {
+              backgroundColor: '#2E2925', // Forcing the background color
+              color: 'white', // Forcing the text color
+            },
+          }}
+        >
 
-      </Container>
+          <MenuItem onClick={handleMenuClose} >
+            <Link to="/" style={{ textDecoration: 'none', color: 'white' }}>Home</Link>
+          </MenuItem>
+
+
+          <MenuItem onClick={handleMenuClose}>
+            <Link to="/a1" style={{ textDecoration: 'none', color: 'white' }}>Everyday Value</Link>
+          </MenuItem>
+
+
+          <MenuItem onClick={handleMenuClose}>
+            <Link to="/b1" style={{ textDecoration: 'none', color: 'white' }}>Ala Carte Combo</Link>
+          </MenuItem>
+
+
+          <MenuItem onClick={handleMenuClose}>
+            <Link to="/d1" style={{ textDecoration: 'none', color: 'white' }}>Sharing</Link>
+          </MenuItem>
+
+
+          <MenuItem onClick={handleMenuClose}>
+            <Link to="/e1" style={{ textDecoration: 'none', color: 'white' }}>Snacks</Link>
+          </MenuItem>
+
+
+          <MenuItem onClick={handleMenuClose}>
+            <Link to="/h" style={{ textDecoration: 'none', color: 'white' }}>Login</Link>
+          </MenuItem>
+
+        </Menu>
+
+
+
+      </StyledToolbar>
+
 
 
 

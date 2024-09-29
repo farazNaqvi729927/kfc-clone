@@ -13,7 +13,7 @@ export default function SharePage(props) {
 
       <Box className='tsFlex'>
         <Box className="kbP">Rs {props.item.price}</Box>
-        <Button onClick={() => props.Add(props.item)} sx={{ backgroundColor: '#E4002B', color: 'white', fontSize: 'calc(1rem + 1vw' }} color="success"> Add To Bucket </Button>
+        <Button onClick={() => props.Add(props.item)} sx={{ backgroundColor: '#E4002B', color: 'white', fontSize: 'clamp(1rem, 1rem + 1vw, 1.3rem)' }} color="success"> Add To Bucket </Button>
       </Box>
     </div>
   );

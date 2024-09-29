@@ -6,7 +6,7 @@ const data6 = {
             name:'Krunch Burger',
             price: 250,
             image:pic,
-            descp:'Crunchy chicken fillet, spicy mayo, lettuce, sandwiched between a sesame seed bun.',
+            descp:'A hearty meal for the fam. It includes 2 Zinger burgers + 2 Krunch burgers + 4 pieces Hot and Crispy Chick...',
             link:'/krunchyBurger'
         }
     ]

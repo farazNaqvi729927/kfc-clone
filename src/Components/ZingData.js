@@ -8,7 +8,7 @@ const data8 = {
             price:320,
             image:z,
             link:'/Zingeratha',
-            descp:'Crispy chicken, sliced onions, tangy imli chutney, mint mayo, wrapped in a soft paratha'
+            descp:'A hearty meal for the fam. It includes 2 Zinger burgers + 2 Krunch burgers + 4 pieces Hot and Crispy Chick...'
         }
     ]
 }

@@ -8,7 +8,7 @@ const data9 = {
             price:340,
             image:data,
             link:'/KrunchBurgerDrink',
-            descp:'1 Krunch burger + 1 drink of your choice cuz you got the dawg in you my G'
+            descp:'A hearty meal for the fam. It includes 2 Zinger burgers + 2 Krunch burgers + 4 pieces Hot and Crispy Chick...'
         }
     ]
 }

@@ -8,7 +8,7 @@ const data15 = {
             price: 520,
             image: shero,
             link: '/ZingerBurger',
-            descp: 'A portrait of our hero- crispy Zinger fillet, signature mayo and lettuce- sandwiched between a sesame...'
+            descp: 'A hearty meal for the fam. It includes 2 Zinger burgers + 2 Krunch burgers + 4 pieces Hot and Crispy Chick...'
         }
     ]
 }

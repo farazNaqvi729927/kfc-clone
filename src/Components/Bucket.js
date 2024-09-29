@@ -82,8 +82,8 @@ export default function Bucket(props) {
 
             <Box style={{ display: 'flex', alignItems: 'center' }}>
 
-              <input style={{ backgroundColor: '#1C1816', border: '2px solid #E4002B', marginRight: '8px' }} className="form-check-input"  type="checkbox" aria-label="..."/>
-              
+              <input style={{ backgroundColor: '#1C1816', border: '2px solid #E4002B', marginRight: '8px' }} className="form-check-input" type="checkbox" aria-label="..." />
+
               <Box>Save For Future</Box>
 
             </Box>

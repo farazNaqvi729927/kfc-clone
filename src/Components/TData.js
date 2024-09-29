@@ -8,7 +8,7 @@ const data14 = {
             price: 380,
             image: t,
             link: '/Twister',
-            descp: 'Tender chicken strips, black pepper mayo, diced tomatoes and lettuce- wrapped in a tortilla. Tender chicken strips, black pepper mayo.'
+            descp: 'A hearty meal for the fam. It includes 2 Zinger burgers + 2 Krunch burgers + 4 pieces Hot and Crispy Chick...'
         }
     ]
 }

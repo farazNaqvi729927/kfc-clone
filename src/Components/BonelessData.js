@@ -8,7 +8,7 @@ const data11 = {
             price:610,
             image: boneless,
             link:'/BonelessMealBox',
-            descp:'Hassle free boneless experience with 4 chicken strips, 1 regular fries + 1 drink + 1 dinner roll'
+            descp:'A hearty meal for the fam. It includes 2 Zinger burgers + 2 Krunch burgers + 4 pieces Hot and Crispy Chick...'
         }
     ]
 }

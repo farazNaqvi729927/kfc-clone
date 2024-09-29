@@ -4,7 +4,7 @@ import slide2 from '../Components/SLIDER/Slide2.jpg';
 import slide3 from '../Components/SLIDER/Slide3.webp';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-import { Container } from '@mui/material';
+import { Box } from '@mui/material';
 
 
 
@@ -22,20 +22,20 @@ export default function Slider() {
     
 
     return (
-        <Container className='g'>
-            <div id="carouselExampleSlidesOnly" className="carousel slide" data-bs-ride="carousel">
-                <div className="carousel-inner">
-                    <div className="carousel-item active">
+        <Box className='g'>
+            <Box id="carouselExampleSlidesOnly" className="carousel slide" data-bs-ride="carousel">
+                <Box className="carousel-inner">
+                    <Box className="carousel-item active">
                         <img src={slide1} className="d-block w-100" alt="Slide 1" />
-                    </div>
-                    <div className="carousel-item">
+                    </Box>
+                    <Box className="carousel-item">
                         <img src={slide2} className="d-block w-100" alt="Slide 2" />
-                    </div>
-                    <div className="carousel-item">
+                    </Box>
+                    <Box className="carousel-item">
                         <img src={slide3} className="d-block w-100" alt="Slide 3" />
-                    </div>
-                </div>
-            </div>
-        </Container>
+                    </Box>
+                </Box>
+            </Box>
+        </Box>
     );
 }

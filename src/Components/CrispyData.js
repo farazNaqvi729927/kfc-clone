@@ -8,7 +8,7 @@ const data12 = {
             price: 580,
             image: shero,
             link:'/CrispyBox',
-            descp:'In mood for something crispy? Get 2 pcs Hot & Crispy Chicken + 1 regular fries + 1 regular drink...'
+            descp:'A hearty meal for the fam. It includes 2 Zinger burgers + 2 Krunch burgers + 4 pieces Hot and Crispy Chick...'
         }
     ]
 }

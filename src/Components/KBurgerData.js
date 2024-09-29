@@ -8,7 +8,7 @@ const data17 = {
             price:560 ,
             image: shero,
             link:'/KentuckyBurger',
-            descp:' OG Zinger fillet layered with beef pepperoni, crispy fried onions, cheese and smokey BBQ sauce- sandwiched...'
+            descp:' A hearty meal for the fam. It includes 2 Zinger burgers + 2 Krunch burgers + 4 pieces Hot and Crispy Chick...'
         }
     ]
 }

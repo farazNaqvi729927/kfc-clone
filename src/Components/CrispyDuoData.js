@@ -8,7 +8,7 @@ const data10 = {
             price:800,
             image: dou,
             link:'/CrispyDuoBox',
-            descp:'Turn up the fun with 5 pcs Hot & Crispy Chicken + 1 large fries + 2 drinks'
+            descp:'A hearty meal for the fam. It includes 2 Zinger burgers + 2 Krunch burgers + 4 pieces Hot and Crispy Chick...'
         }
     ]
 }

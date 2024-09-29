@@ -23,12 +23,12 @@ export default function Bucket(props) {
   return (
 
     <Container>
-      <Container className='bTicks'>
+      <Box className='bTicks'>
         <Box>
           <h1 >Checkout Panel</h1>
         </Box>
 
-      </Container>
+      </Box>
 
 
 
@@ -39,22 +39,22 @@ export default function Bucket(props) {
         <Box className='yy'>
 
 
-          <textarea style={{ border: 'none', width: '100%' }} onKeyDown={handler} minLength={0} className='qaq' rows="5" cols="38" />
-          <p style={{fontSize:'clamp(2rem, 1.8rem + 1vw, 2rem)', textAlign: 'left' }}>Special Instructions (Optional)</p>
+          <textarea style={{ border: 'none', width: '100%', fontSize:'calc(0.5rem + 1vw)' }} onKeyDown={handler} minLength={0} className='qaq' rows="8" cols="38" />
+          <Box sx={{fontSize:'calc(1rem + 1vw)'}}>Special Instructions (Optional)</Box>
 
 
 
-          <Box style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
+          <Box sx={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
 
-            <Box style={{ display: 'flex', alignItems: 'center' }}>
+            <Box sx={{ display: 'flex', alignItems: 'center',marginTop:'1em' }}>
 
-              <input style={{ backgroundColor: '#1C1816', border: '2px solid #E4002B', marginRight: '8px' }} className="form-check-input" type="checkbox" aria-label="..." />
+              <input style={{ backgroundColor: '#1C1816', border: '2px solid #E4002B', marginRight: '8px',fontSize:'calc(0.5rem + 1vw)' }} className="form-check-input" type="checkbox" aria-label="..." />
 
-              <Box sx={{fontSize:'clamp(2rem, 1.8rem + 1vw, 2rem)'}}>Save For Future</Box>
+              <Box sx={{fontSize:'calc(1rem + 1vw)'}}>Save For Future</Box>
 
             </Box>
 
-            <div style={{fontSize:'clamp(2rem, 1.8rem + 1vw, 2rem)'}}>{limit}/200</div>
+            <Box sx={{fontSize:'calc(1rem + 1vw)',marginTop:'0.5em'}}>{limit}/200</Box>
           </Box>
 
 
@@ -62,7 +62,7 @@ export default function Bucket(props) {
 
           <Link className='cOut' to='/h'>
 
-            <Box style={{fontSize:'clamp(2rem, 1.8rem + 1vw, 2rem)', backgroundColor: '#E4002B', textAlign: 'center', border: 'none', borderRadius: '6px', padding: '13px', cursor: 'pointer', }} >
+            <Box sx={{fontSize:'calc(1rem + 1vw)', padding:'0.5em', backgroundColor: '#E4002B', textAlign: 'center', border: 'none', borderRadius: '6px', cursor: 'pointer', }} >
               Place Order
             </Box>
 

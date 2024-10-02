@@ -4,6 +4,10 @@ import MenuIcon from '@mui/icons-material/Menu';
 import kfc from './logo.png';
 import { Link, NavLink } from "react-router-dom";
 import SideBar from './SideBar';
+import { createTheme, ThemeProvider } from '@mui/material/styles';
+
+
+
 
 const StyledToolbar = styled(Toolbar)(({ theme }) => ({
   display: "flex",
@@ -108,6 +112,36 @@ const Navbar = (props) => {
 
 
 
+  const theme = createTheme({
+    breakpoints: {
+      values: {
+        mobile: 0,
+        tablet: 600,
+        laptop: 900,
+        desktop: 1200,
+        extraSmall: 1536,
+        extraLarge: 1920,
+        xxLarge: 2560,
+      },
+    },
+
+    typography: {
+      fontSize: {
+        mobile: '12px',
+        tablet: '14px',
+        laptop: '16px',
+        desktop: '18px',
+        extraSmall: '20px',
+        extraLarge: '24px',
+        xxLarge: '28px',
+      },
+    },
+  });
+
+
+
+
+
   return (
 
     <AppBar sx={{ backgroundColor: 'black' }} position="sticky">
@@ -146,9 +180,11 @@ const Navbar = (props) => {
 
             <div style={{ position: 'relative', cursor: 'pointer' }} onClick={toggleDrawer(true)}>
 
-            <Box component="img" src="https://www.kfcpakistan.com/static/media/bucket-filled.d2ad11819eca0f28a8ac.svg" alt="KFC Logo" sx={{ width: '100%', maxWidth: { xs: '55px', sm: '55px', md: '55px', lg: '70px', xl: '140px' } }} />
+              <ThemeProvider theme={theme}>
+                <Box className="bucketNNN" component="img" src="https://www.kfcpakistan.com/static/media/bucket-filled.d2ad11819eca0f28a8ac.svg" alt="KFC Logo" sx={{ width: '100%', maxWidth: { mobile: '55px', tablet: '55px', laptop: '55px', desktop: '70px', extraSmall: '100px', extraLarge: '110px', xxLarge: '140px' } }} />
+              </ThemeProvider>
 
-              <Box sx={{ position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%, -50%)', fontSize: { xs: '1.2rem', sm: '1.2rem', md: '1rem', lg: '1.5rem', xl: '3rem' }, fontWeight: 'bold', color: 'black', }} >
+              <Box sx={{ position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%, -50%)', fontSize: { xs: '1.2rem', sm: '1.2rem', md: '1rem', lg: '1.5rem', xl: '2.6rem' }, fontWeight: 'bold', color: 'black', }} >
                 {num}
               </Box>
 

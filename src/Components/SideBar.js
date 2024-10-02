@@ -21,7 +21,7 @@ export default function SideBar(props) {
 
               <Box sx={{ display: 'flex', flexDirection: 'column', marginLeft: '0.2em', flex: '1' }}>
 
-                <Box sx={{ fontSize: 'calc(1rem + 0.8vw)' }}>
+                <Box sx={{ fontSize: 'calc(1rem + 0.8vw)',fontWeight: 'bold'  }}>
                   {Item.name}
                 </Box>
 
@@ -46,7 +46,7 @@ export default function SideBar(props) {
                     )}
 
 
-                    <Box sx={{fontSize: 'calc(1rem + 0.8vw)', color: 'white', margin: '0 0.2em' }}>
+                    <Box sx={{fontSize: 'calc(1rem + 0.8vw)', color: 'white', fontWeight: 'bold', margin: '0 0.2em' }}>
                       {Item.qty}
                     </Box>
 
@@ -68,7 +68,7 @@ export default function SideBar(props) {
                   </Box>
 
 
-                  <Box sx={{fontSize: 'calc(1rem + 0.8vw)'}}>
+                  <Box sx={{fontSize: 'calc(1rem + 0.8vw)', fontWeight: 'bold' }}>
                     Rs {Item.qty * Item.price}
                   </Box>
 

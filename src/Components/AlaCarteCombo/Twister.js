@@ -1,4 +1,4 @@
-import { Box, Container } from '@mui/material'
+import { Box } from '@mui/material'
 import React from 'react'
 
 export default function Wow(props) {
@@ -6,74 +6,53 @@ export default function Wow(props) {
 
   return (
 
-    <Container>
-      {/* <Box style={{ zIndex: '1' }} className='navbar fixed-top navbar-expand-lg bg-black navbar-dark'>
-
-         <Box className='a1'>
-
-          <Link className="nav-link active a2 " aria-current="page" to="/a1">Everyday Value</Link>
-
-          <Link className="nav-link active a2 a3" aria-current="page" to="/b1">Ala Carte & Combos</Link>
-
-          <Link className="nav-link active a2 " aria-current="page" to="/d1">Sharing</Link>
-
-          <Link className="nav-link active a2" aria-current="page" to="/e1">Snacks & Beverages</Link>
-
-        </Box> 
-
-      </Box> */}
-
-
-
-     
-
-
+    <Box>
 
       {items14.map((x) => {
+
         return (
           <>
-            <h2 style={{ color: 'white', textAlign: 'center', marginTop: '2em', fontWeight: 'bold' }}>Ala Carte Combo</h2>
+            <Box style={{ color: 'white', fontSize: 'calc(1rem + 1.5vw)', textAlign: 'center', marginTop: '2em', fontWeight: 'bold' }}>Ala Carte Combo</Box>
 
 
             <Box key={x.id} className='cb'>
 
               <Box>
-                <img style={{ maxWidth: '400px' }} src={x.image} alt="" />
+                <img style={{ maxWidth: 'calc(100vw - 20px)' }} src={x.image} alt="" />
               </Box>
-
 
               <Box>
 
-                <h2 >{x.name}</h2>
+                <Box sx={{ fontSize: 'calc(1rem + 1.5vw)', fontWeight: 'bold' }}>{x.name}</Box>
+                <Box sx={{ fontSize: 'calc(1rem + 1.2vw)', width: '100%' }}>Crunchy chicken fillet, spicy mayo, lettuce, sandwiched between a sesame seed bun</Box>
+                <Box sx={{ fontSize: 'calc(1rem + 1.5vw)', fontWeight: 'bold' }}>Rs {x.price}</Box>
 
 
-                <h3 >Crunchy chicken fillet, spicy mayo, lettuce, sandwiched between a sesame seed bun</h3>
-
-                <h2 >Rs {x.price}</h2>
+                <Box sx={{ display: 'flex', marginTop: '1em', justifyContent: 'center', padding: '1em', alignItems: 'center' }}>
 
 
+                  <Box sx={{ display: 'flex', gap: '1em', justifyContent: 'center', padding: '1em', alignItems: 'center', marginLeft: '1em' }}>
+                    <button className='qqq' onClick={props.decre}>  <i style={{ color: 'white' }} className="bi bi-dash"></i> </button>
 
-                <Container style={{ display: 'flex', gap: '1em', marginTop: '1em', justifyContent: 'center', padding: '1em' }}>
+                    <Box style={{ display: 'flex', alignItems: 'center', fontSize: 'calc(1rem + 1.2vw)' }}>{props.count}</Box>
+
+                    {props.count < 10 ? <button className='qqq' onClick={props.incre}>  <i className="bi bi-plus"></i> </button>
+                      : <button id='ppp' onClick={props.incre}>  <i className="bi bi-plus"></i> </button>}
+                  </Box>
 
 
-                  <button className='qqq' onClick={props.decre}>  <i style={{ color: 'white' }} className="bi bi-dash"></i> </button>
+                  <Box>
+                    <button onClick={() => Add(x)} className='ee'>Add to Bucket</button>
+                  </Box>
 
-                  <h5 style={{ display: 'flex', alignItems: 'center' }}>{props.count}</h5>
-
-                  {props.count < 10 ? <button className='qqq' onClick={props.incre}>  <i className="bi bi-plus"></i> </button>
-                    : <button id='ppp' onClick={props.incre}>  <i className="bi bi-plus"></i> </button>}
-
-                  <button onClick={() => Add(x)} className='ee'>Add to Bucket</button>
-
-                </Container>
-
+                </Box>
 
               </Box>
 
             </Box>
           </>
-        )
+        );
       })}
-    </Container>
+    </Box>
   )
 }

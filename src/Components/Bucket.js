@@ -25,7 +25,7 @@ export default function Bucket(props) {
     <Container>
       <Box className='bTicks'>
         <Box>
-          <h1 >Checkout Panel</h1>
+          <div style = {{fontSize:'calc(1rem + 2vw)',fontWeight:'bold'}} >Checkout Panel</div>
         </Box>
 
       </Box>
@@ -39,7 +39,7 @@ export default function Bucket(props) {
         <Box className='yy'>
 
 
-          <textarea style={{ border: 'none', width: '100%', fontSize:'calc(0.5rem + 1vw)' }} onKeyDown={handler} minLength={0} className='qaq' rows="8" cols="38" />
+          <textarea style={{ border: 'none', width: '100%', fontSize:'calc(1rem + 1vw)' }} onKeyDown={handler} minLength={0} className='qaq' rows="6" cols="38" />
           <Box sx={{fontSize:'calc(1rem + 1vw)'}}>Special Instructions (Optional)</Box>
 
 
@@ -50,11 +50,11 @@ export default function Bucket(props) {
 
               <input style={{ backgroundColor: '#1C1816', border: '2px solid #E4002B', marginRight: '8px',fontSize:'calc(0.5rem + 1vw)' }} className="form-check-input" type="checkbox" aria-label="..." />
 
-              <Box sx={{fontSize:'calc(1rem + 1vw)'}}>Save For Future</Box>
+              <Box sx={{fontSize:'calc(1rem + 0.9vw)'}}>Save For Future</Box>
 
             </Box>
 
-            <Box sx={{fontSize:'calc(1rem + 1vw)',marginTop:'0.5em'}}>{limit}/200</Box>
+            <Box sx={{fontSize:'calc(1rem + 0.9vw)',marginTop:'0.5em'}}>{limit}/200</Box>
           </Box>
 
 

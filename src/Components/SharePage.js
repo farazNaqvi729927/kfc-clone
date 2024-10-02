@@ -2,9 +2,11 @@ import { Box, Button } from '@mui/material';
 import React from 'react';
 import { Link } from 'react-router-dom';
 
+
 export default function SharePage(props) {
   return (
-    <div className="y">
+   
+   <div className="y">
       <Link className="nav-link active" aria-current="page" to={props.item.link}>
         <img style={{ maxWidth: '200px' }} src={props.item.image} alt="" />
         <div className="kbN">{props.item.name}</div>
@@ -13,7 +15,7 @@ export default function SharePage(props) {
 
       <Box className='tsFlex'>
         <Box className="kbP">Rs {props.item.price}</Box>
-        <Button onClick={() => props.Add(props.item)} sx={{ backgroundColor: '#E4002B', color: 'white', fontSize: 'clamp(1rem, 1rem + 1vw, 1.3rem)' }} color="success"> Add To Bucket </Button>
+        <Button onClick={() => props.Add(props.item)} sx={{ backgroundColor: '#E4002B', color: 'white', fontSize: 'calc(1rem + 0.5vw)', padding: '0.5em' }} color="success"> Add To Bucket </Button>
       </Box>
     </div>
   );

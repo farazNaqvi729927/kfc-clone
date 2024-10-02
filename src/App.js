@@ -60,6 +60,7 @@ import data17 from './Components/KBurgerData';
 import Bucket from './Components/Bucket';
 import Footer from './Components/Footer';
 
+import { Box } from '@mui/material';
 
 
 
@@ -211,7 +212,7 @@ function App() {
 
   return (
 
-    <div>
+    <Box>
 
       <BrowserRouter>
 
@@ -264,7 +265,7 @@ function App() {
 
       </BrowserRouter>
 
-    </div>
+    </Box>
 
   );
 

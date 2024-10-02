@@ -57,13 +57,13 @@ const Navbar = (props) => {
   // Content of the Drawer
   const drawerList = (
 
-    <Box sx={{ width: { xs: '350px', sm: '400px', md: '400px', lg: '400px', xl: '500px' }, height: '100%', padding: '1rem' }} role="presentation">
+    <Box className="sbSize" sx={{ padding: '1rem' }} role="presentation">
 
       <Box className='e1'>
 
-        <Box sx={{ fontSize: 'clamp(1rem, 1rem + 1vw, 2.5rem)', fontWeight: 'bold' }}>{props.num}</Box>
-        <Box sx={{ fontSize: 'clamp(1rem, 1rem + 1vw, 2.5rem)', fontWeight: 'bold' }}>Your Bucket</Box>
-        {num >= 1 ? <Box sx={{ fontSize: 'clamp(1rem, 1rem + 1vw, 2.5rem)', fontWeight: 'bold' }} className='SBC'>Rs {itemPrice}</Box> : ''}
+        <Box sx={{ fontSize: 'calc(1rem + 1vw)', fontWeight: 'bold' }}>{props.num}</Box>
+        <Box sx={{ fontSize: 'calc(1rem + 1vw)', fontWeight: 'bold' }}>Your Bucket</Box>
+        {num >= 1 ? <Box sx={{ fontSize: 'calc(1rem + 1vw)', fontWeight: 'bold' }} className='SBC'>Rs {itemPrice}</Box> : ''}
 
       </Box>
 
@@ -146,9 +146,9 @@ const Navbar = (props) => {
 
             <div style={{ position: 'relative', cursor: 'pointer' }} onClick={toggleDrawer(true)}>
 
-            <Box component="img" src="https://www.kfcpakistan.com/static/media/bucket-filled.d2ad11819eca0f28a8ac.svg" alt="KFC Logo" sx={{ width: '100%', maxWidth: { xs: '55px', sm: '55px', md: '55px', lg: '70px', xl: '100px' }, height: 'auto' }} />
+            <Box component="img" src="https://www.kfcpakistan.com/static/media/bucket-filled.d2ad11819eca0f28a8ac.svg" alt="KFC Logo" sx={{ width: '100%', maxWidth: { xs: '55px', sm: '55px', md: '55px', lg: '70px', xl: '140px' } }} />
 
-              <Box sx={{ position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%, -50%)', fontSize: { xs: '1.2rem', sm: '1.2rem', md: '1rem', lg: '1.5rem', xl: '2rem' }, fontWeight: 'bold', color: 'black', }} >
+              <Box sx={{ position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%, -50%)', fontSize: { xs: '1.2rem', sm: '1.2rem', md: '1rem', lg: '1.5rem', xl: '3rem' }, fontWeight: 'bold', color: 'black', }} >
                 {num}
               </Box>
 

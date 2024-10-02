@@ -16,30 +16,31 @@ export default function Footer() {
                 <Box sx={{ justifyContent: 'center', alignItems: 'center' }}>
 
                     <Box sx={{ marginBottom: '1em', display: 'flex', justifyContent: 'center' }}>
-                    <Box component="img" src={kfc} alt="KFC Logo" sx={{ maxWidth: { xs: '85px', sm: '85px', md: '85px', lg: '85px', xl: '110px' }, height: 'auto' }} />
+                        <Box component="img" src={kfc} alt="KFC Logo" sx={{ maxWidth: { xs: '85px', sm: '85px', md: '85px', lg: '85px', xl: '130px' }, height: 'auto' }} />
                     </Box>
 
+
                     <Box sx={{ display: 'flex', justifyContent: 'center', gap: '1em' }}>
+                        
                         <IconButton href="https://www.facebook.com/KFCPakistan" target="_blank" sx={{ color: 'white' }}>
-                            <FacebookIcon sx={{ fontSize: 'clamp(2rem, 1.8rem + 1vw, 2.5rem)' }} /> {/* Increase icon size */}
+                            <FacebookIcon sx={{ fontSize: 'calc(1rem + 2vw)' }} /> {/* Increase icon size */}
                         </IconButton>
 
                         <IconButton href="https://twitter.com/KFCPakistan" target="_blank" sx={{ color: 'white' }}>
-                            <TwitterIcon sx={{ fontSize: 'clamp(2rem, 1.8rem + 1vw, 2.5rem)' }} /> {/* Increase icon size */}
+                            <TwitterIcon sx={{ fontSize: 'calc(1rem + 2vw)' }} /> {/* Increase icon size */}
                         </IconButton>
 
                         <IconButton href="https://www.instagram.com/kfcpakistanofficial/?hl=en" target="_blank" sx={{ color: 'white' }}>
-                            <InstagramIcon sx={{ fontSize: 'clamp(2rem, 1.8rem + 1vw, 2.5rem)' }} /> {/* Increase icon size */}
+                            <InstagramIcon sx={{ fontSize: 'calc(1rem + 2vw)' }} /> {/* Increase icon size */}
                         </IconButton>
 
                         <IconButton href="https://www.youtube.com/@kfcpakistan6047" target="_blank" sx={{ color: 'white' }}>
-                            <YouTubeIcon sx={{ fontSize: 'clamp(2rem, 1.8rem + 1vw, 2.5rem)' }} /> {/* Increase icon size */}
+                            <YouTubeIcon sx={{ fontSize: 'calc(1rem + 2vw)' }} /> {/* Increase icon size */}
                         </IconButton>
+                    
                     </Box>
 
-
                 </Box>
-
 
 
 

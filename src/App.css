@@ -118,15 +118,6 @@ body {
 }
 
 
-
-.f {
-    margin-top: 3em;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-
 .g {
     margin-top: 2%;
     padding: 2em;
@@ -163,6 +154,16 @@ h1 {
 
 
 
+
+.f {
+    margin-top: 5em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
 .j {
     background: #1C1816;
     border-radius: 5px;
@@ -172,11 +173,49 @@ h1 {
 
 
 
-
-#w {
-    box-sizing: border-box;
-    align-items: center;
+.l {
+    color: #fff;
+    background-color: #E4002B;
+    padding: 0.3em;
+    border-radius: 0.3rem;
+    cursor: pointer;
+    border: none;
+    width: 50%;
+    font-size: calc(1rem + 1vw);
+    margin-top: 1em;
+    text-transform: uppercase;
 }
+
+
+
+.lsign {
+    color: #fff;
+    background-color: #E4002B;
+    padding: 0.5em;
+    border-radius: 0.3rem;
+    cursor: pointer;
+    border: none;
+    width: 80%;
+    font-size: calc(1rem + 1vw);
+    margin-top: 1em;
+    text-transform: uppercase;
+
+}
+
+
+
+.sos {
+    color: white;
+    background-color: #E4002B;
+    border-radius: 2px;
+    font-size: calc(1rem + 1vw);
+    padding: 0.5em;
+    text-decoration: none;
+    margin-top: 1em;
+
+}
+
+
 
 input[type='email'] {
     width: 100%;
@@ -217,34 +256,6 @@ span {
     position: absolute;
     left: 50;
     top: 40;
-}
-
-
-.l {
-    color: #fff;
-    background-color: #E4002B;
-    padding: 0.5em;
-    border-radius: 0.3rem;
-    cursor: pointer;
-    border: none;
-    width: 40%;
-    font-size: clamp(1rem, 1rem + 1vw, 2rem);
-    margin-top: 0.5em;
-}
-
-
-
-
-.lsign {
-    color: #fff;
-    background-color: #E4002B;
-    padding: 0.5em;
-    border-radius: 0.3rem;
-    cursor: pointer;
-    border: none;
-    width: 70%;
-    font-size: clamp(1rem, 1rem + 1vw, 2rem);
-    margin-top: 0.5em;
 }
 
 
@@ -360,7 +371,7 @@ span {
 
 
 .nbH {
-    font-size: clamp(1rem, 2vw, 2rem);
+    font-size: calc(1rem + 1vw);
 
 }
 
@@ -395,7 +406,6 @@ span {
     flex-wrap: wrap;
     gap: 15px;
     height: 100%;
-    width: 100%;
     justify-content: center;
     margin-top: 2em;
 }
@@ -474,60 +484,7 @@ span {
     justify-content: center;
     align-items: center;
     text-align: center;
-}
-
-
-
-
-.cb1 {
-    border-color: white;
-    display: flex;
-    flex-wrap: wrap;
-    color: white;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-}
-
-
-
-
-
-.cb2 {
-    border-color: white;
-    display: flex;
-    flex-wrap: wrap;
-    color: white;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-}
-
-
-
-
-
-.cb3 {
-    border-color: white;
-    display: flex;
-    flex-wrap: wrap;
-    color: white;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-}
-
-
-
-
-.ee {
-    background-color: #E4002B;
-    color: white;
-    font-size: clamp(1rem, 1.8rem + 1vw, 2rem);
-    border: none;
-    padding: 0.5em;
-    border-radius: 0.3rem;
-    margin-left: 1em;
+    flex-direction: column;
 }
 
 
@@ -537,7 +494,7 @@ span {
     color: rgb(255, 255, 255) !important;
     border: none;
     border-radius: 0.3rem;
-    font-size: clamp(1rem, 1.8rem + 1vw, 1.5rem);
+    font-size: calc(1rem + 1.5vw);
 
 }
 
@@ -546,11 +503,21 @@ span {
     color: rgb(255, 255, 255) !important;
     border: none;
     border-radius: 0.3rem;
-    font-size: clamp(1rem, 1.8rem + 1vw, 1.5rem);
-    width: 100%;
+    font-size: calc(1rem + 1.5vw);
+    
 }
 
 
+
+.ee {
+    background-color: #E4002B;
+    color: white;
+    font-size: calc(1rem + 1vw);
+    border: none;
+    padding: 0.7em;
+    border-radius: 0.3rem;
+    margin-left: 1em;
+}
 
 
 .overlay {
@@ -592,7 +559,7 @@ span {
     color: #E4002B;
     border: none;
     background-color: transparent;
-    font-size: clamp(1rem, 0.8rem + 1vw, 2rem);
+    font-size: calc(1rem + 0.8vw);
 }
 
 
@@ -601,7 +568,7 @@ span {
     background-color: transparent;
     color: #E4002B;
     border: none;
-    font-size: clamp(1rem, 0.8rem + 1vw, 2rem);
+    font-size: calc(1rem + 1vw);
 
 }
 
@@ -611,7 +578,7 @@ span {
     background-color: transparent;
     color: #E4002B;
     border: none;
-    font-size: clamp(1rem, 0.8rem + 1vw, 2rem);
+    font-size: calc(1rem + 1vw);
 }
 
 
@@ -619,7 +586,7 @@ span {
     background-color: transparent;
     color: #E4002B;
     border: none;
-    font-size: clamp(1rem, 0.8rem + 1vw, 2rem);
+    font-size: calc(1rem + 1vw);
 
 }
 
@@ -646,7 +613,7 @@ span {
 .viewB {
     z-index: 1;
     bottom: 1em;
-    padding: 0.5em;
+    padding: calc(1rem + 0.1vw);
     background-color: #E4002B;
     text-align: center;
     font-weight: bold;
@@ -659,7 +626,7 @@ span {
 .zxc {
     text-decoration: none;
     color: white;
-    font-size: clamp(1rem, 1.8rem + 1vw, 2.5rem);
+    font-size: calc(1rem + 1vw);
     font-weight: 500;
 }
 
@@ -804,7 +771,7 @@ span {
     align-items: center;
     flex-direction: column;
     gap: 0.5em;
-    
+
 }
 
 
@@ -816,8 +783,7 @@ span {
     background-color: #1C1816;
     filter: drop-shadow(0px 4px 33px rgba(228, 0, 43, 0.11));
     margin-top: 1%;
-    max-width: clamp(370px, 50%, 1000px);
-    
+
 }
 
 
@@ -826,10 +792,12 @@ span {
 .y11 {
     display: flex;
     color: white;
-    font-size: clamp(2rem, 1.8rem + 1vw, 2rem);
+    font-size: calc(1rem + 1.5vw);
     justify-content: space-between;
     margin-top: 1em;
+    font-weight: bold;
 }
+
 
 .SU {
     margin-top: 1%;
@@ -842,15 +810,6 @@ span {
     color: white;
 }
 
-.sos {
-    color: white;
-    background-color: #E4002B;
-    border-radius: 2px;
-    font-size: clamp(1rem, 1rem + 1vw, 1.6rem);
-    padding: 0.5em;
-    text-decoration: none;
-
-}
 
 #pope {
 
@@ -870,9 +829,6 @@ span {
     width: 29%;
     height: 110px
 }
-
-
-
 
 
 
@@ -935,7 +891,7 @@ span {
 
 
 .kbN {
-    font-size: clamp(1rem, 1rem + 1vw, 1.7rem);
+    font-size: calc(1rem + 0.8vw);
     font-weight: bold;
     line-height: 1.167;
     color: white;
@@ -945,7 +901,7 @@ span {
 
 .kbDesc {
     color: white;
-    font-size: clamp(1rem, 1.8vw, 1.8rem);
+    font-size: calc(1rem + 0.8vw);
     height: auto;
     margin-top: 1em;
 }
@@ -955,14 +911,14 @@ span {
 
 .kbP {
     color: white;
-    font-size: clamp(2rem, 1.8rem + 1vw, 2rem);
+    font-size: calc(1rem + 1vw);
     font-weight: 400px;
 }
 
 
 
 .y {
-    padding: 1em;
+    padding: 2em;
     text-align: center;
     border-radius: 12px;
     background-color: #1C1816;
@@ -984,13 +940,9 @@ span {
 
 
 
-
-
-
-
 .sbemptyB {
     text-align: center;
-    font-size: clamp(1rem, 1.8rem + 1vw, 2rem);
+    font-size: calc(1rem + 1vw);
     margin-top: 8em;
 }
 
@@ -1089,37 +1041,107 @@ span {
 }
 
 
-.NBhover {
-    padding: 0.5em;
-    font-size: clamp(2rem, 1.8rem + 1vw, 3rem);
-}
-
-.NBhover:hover {
-    background-color: #E4002B;
-
-}
-
 
 .nbLink {
-    font-size: clamp(1rem, 0.8rem + 1vw, 2rem);
+    font-size: calc(1rem + 1vw);
+}
 
+
+.sbSize {
+    width: 350px;
 }
 
 
 
-h1 {
-    font-size: 2rem;
-    font-size: clamp(2rem, 1.6rem + 2vw, 4rem);
+@media (min-width: 320px) {
+    .sbSize {
+        width: 285px;
+    }
 }
 
 
-h2 {
-    font-size: 1rem;
-    font-size: clamp(1rem, 0.6rem + 2vw, 3rem);
+
+@media (min-width: 375px) {
+    .sbSize {
+        width: 300px;
+    }
+}
+
+@media (min-width: 480px) {
+    .sbSize {
+        width: 350px;
+    }
+}
+
+@media (min-width: 768px) {
+    .sbSize {
+        width: 400px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .sbSize {
+        width: 400px;
+    }
+}
+
+@media (min-width: 1280px) {
+    .sbSize {
+        width: 400px;
+    }
+}
+
+@media (min-width: 1536px) {
+    .sbSize {
+        width: 500px;
+    }
+}
+
+@media (min-width: 1920px) {
+    .sbSize {
+        width: 500px;
+    }
+}
+
+@media (min-width: 2560px) {
+    .sbSize {
+        width: 650px;
+    }
 }
 
 
-h3 {
-    font-size: 1rem;
-    font-size: clamp(1rem, 0.8rem + 1vw, 2rem);
+
+
+
+
+.j {
+    background: #1C1816;
+    border-radius: 5px;
+    padding: 3em;
+    width: 500px;
+}
+
+
+
+@media (min-width: 1920px) {
+
+    .j {
+        background: #1C1816;
+        border-radius: 5px;
+        padding: 3em;
+        width: 700px;
+    }
+
+}
+
+
+@media (min-width: 2560px) {
+
+    .j {
+        background: #1C1816;
+        border-radius: 5px;
+        padding: 3em;
+        width: 800px;
+    }
+
 }

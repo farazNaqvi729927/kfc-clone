@@ -8,7 +8,7 @@ const data16 = {
             price: 780,
             image:shero,
             link:'/ZingerStackerCombo',
-            descp:'A hearty meal for the fam. It includes 2 Zinger burgers + 2 Krunch burgers + 4 pieces Hot and Crispy Chick...'
+            descp:'The KFC Zinger Stacker features layers of spicy Zinger fillets, fresh lettuce, and creamy mayo stacked between soft buns.'
         }
     ]
 }

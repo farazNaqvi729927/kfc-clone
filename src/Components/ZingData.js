@@ -8,7 +8,7 @@ const data8 = {
             price:320,
             image:z,
             link:'/Zingeratha',
-            descp:'A hearty meal for the fam. It includes 2 Zinger burgers + 2 Krunch burgers + 4 pieces Hot and Crispy Chick...'
+            descp:'The KFC Zingeratha combines the bold flavors of a Zinger fillet wrapped in a soft paratha, delivering a unique and spicy twist on a classic favorite.'
         }
     ]
 }

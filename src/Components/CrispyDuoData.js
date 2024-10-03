@@ -8,7 +8,7 @@ const data10 = {
             price:800,
             image: dou,
             link:'/CrispyDuoBox',
-            descp:'A hearty meal for the fam. It includes 2 Zinger burgers + 2 Krunch burgers + 4 pieces Hot and Crispy Chick...'
+            descp:'The KFC Crispy Duo Box includes a delightful combination of crispy chicken pieces and a savory side, accompanied by fries and a drink.'
         }
     ]
 }

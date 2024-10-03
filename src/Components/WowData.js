@@ -8,7 +8,7 @@ const data13 = {
             price: 850,
             image: shero,
             link:'/WowMealBox',
-            descp:'A hearty meal for the fam. It includes 2 Zinger burgers + 2 Krunch burgers + 4 pieces Hot and Crispy Chick...'
+            descp:'The KFC Wow Meal Box includes a crispy Krunch Burger, fries, and a refreshing drink, offering a complete and satisfying meal in one box.'
         }
     ]
 }

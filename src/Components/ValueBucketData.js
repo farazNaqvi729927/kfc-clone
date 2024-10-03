@@ -9,7 +9,7 @@ const data4 = {
             price: 630,
             image: shero1,
             link: '/ValueBucket',
-            descp: 'Our pride and joy: hand-breaded and fried to perfection in house. 9 pcs of Colonel’s Signature Cri...'
+            descp: 'The KFC Value Bucket offers a delicious combination of crispy fried chicken pieces, at an unbeatable price.'
         }
     ]
 }

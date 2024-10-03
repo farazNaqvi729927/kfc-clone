@@ -8,7 +8,7 @@ const data15 = {
             price: 520,
             image: shero,
             link: '/ZingerBurger',
-            descp: 'A hearty meal for the fam. It includes 2 Zinger burgers + 2 Krunch burgers + 4 pieces Hot and Crispy Chick...'
+            descp: 'The KFC Zinger Burger features a crispy, spicy chicken fillet topped with fresh lettuce and creamy mayo, all nestled in a soft bun'
         }
     ]
 }

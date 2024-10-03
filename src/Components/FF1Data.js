@@ -11,7 +11,7 @@ const data1 = {
             price: 790,
             image: shero1,
             link: '/FamilyFestival1',
-            descp: 'A feel-good meal for the fam. It includes 4 Krunch burgers+ 4 pieces Hot and Crispy Chicken + 1.5 Ltr drink'
+            descp: 'The KFC Family Bucket 1 offers a hearty serving of crispy fried chicken, perfect for sharing a delicious meal with your loved ones.'
         },
 
     ]

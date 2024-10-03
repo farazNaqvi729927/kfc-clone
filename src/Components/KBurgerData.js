@@ -8,7 +8,7 @@ const data17 = {
             price:560 ,
             image: shero,
             link:'/KentuckyBurger',
-            descp:' A hearty meal for the fam. It includes 2 Zinger burgers + 2 Krunch burgers + 4 pieces Hot and Crispy Chick...'
+            descp:'The KFC Kentucky Burger features a juicy chicken fillet topped with fresh lettuce, creamy mayo, all nestled in a soft bun.'
         }
     ]
 }

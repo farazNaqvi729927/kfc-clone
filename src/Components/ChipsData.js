@@ -8,7 +8,7 @@ const data7 = {
             price:250,
             image:rice,
             link:'/RiceNSpice',
-            descp:'A hearty meal for the fam. It includes 2 Zinger burgers + 2 Krunch burgers + 4 pieces Hot and Crispy Chick...'
+            descp:'The KFC Rice N Spice offers a flavorful serving of aromatic rice topped with crispy chicken strips, complemented by KFCs signature spicy sauce.'
         }
     ]
 }

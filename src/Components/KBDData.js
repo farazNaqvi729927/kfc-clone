@@ -8,7 +8,7 @@ const data9 = {
             price:340,
             image:data,
             link:'/KrunchBurgerDrink',
-            descp:'A hearty meal for the fam. It includes 2 Zinger burgers + 2 Krunch burgers + 4 pieces Hot and Crispy Chick...'
+            descp:'The KFC Krunch Drink combo includes a delicious Krunch burger paired with a refreshing drink, perfect for a quick and tasty meal.'
         }
     ]
 }

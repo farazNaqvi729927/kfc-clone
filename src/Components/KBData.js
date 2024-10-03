@@ -6,7 +6,7 @@ const data6 = {
             name:'Krunch Burger',
             price: 250,
             image:pic,
-            descp:'A hearty meal for the fam. It includes 2 Zinger burgers + 2 Krunch burgers + 4 pieces Hot and Crispy Chick...',
+            descp:'The KFC Krunch Burger features a crispy chicken fillet, fresh lettuce, and tangy mayo, all packed into a soft bun for a quick and delicious bite.',
             link:'/krunchyBurger'
         }
     ]

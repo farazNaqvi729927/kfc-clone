@@ -8,7 +8,7 @@ const data11 = {
             price:610,
             image: boneless,
             link:'/BonelessMealBox',
-            descp:'A hearty meal for the fam. It includes 2 Zinger burgers + 2 Krunch burgers + 4 pieces Hot and Crispy Chick...'
+            descp:'The KFC Boneless Meal offers tender, juicy boneless chicken pieces served with your choice of sides and a drink, providing a deliciously easy dining experience.'
         }
     ]
 }

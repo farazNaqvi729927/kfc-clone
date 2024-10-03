@@ -8,7 +8,7 @@ const data14 = {
             price: 380,
             image: t,
             link: '/Twister',
-            descp: 'A hearty meal for the fam. It includes 2 Zinger burgers + 2 Krunch burgers + 4 pieces Hot and Crispy Chick...'
+            descp: 'The KFC Twister wraps a spicy Zinger fillet with fresh lettuce, tangy mayo, and a mix of flavorful sauces in a soft tortilla.'
         }
     ]
 }

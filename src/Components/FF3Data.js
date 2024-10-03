@@ -10,7 +10,7 @@ const data3 = {
             price: 990,
             image: shero3,
             link: '/FamilyFestival2',
-            descp: 'A hearty meal for the fam. It includes 2 Zinger burgers + 2 Krunch burgers + 4 pieces Hot and Crispy Chick...'
+            descp: 'The KFC meal offers a delightful combination of crispy fried chicken, sides providing a satisfying meal experience.'
         },
     ]
 }

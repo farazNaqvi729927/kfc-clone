@@ -27,7 +27,7 @@ export default function FFTWO(props) {
               <Box>
 
                 <Box sx={{ fontSize: 'calc(1rem + 1.5vw)', fontWeight: 'bold' }}>{x.name}</Box>
-                <Box sx={{ fontSize: 'calc(1rem + 1.2vw)', width: '100%' }}>Crunchy chicken fillet, spicy mayo, lettuce, sandwiched between a sesame seed bun</Box>
+                <Box sx={{ fontSize: 'calc(1rem + 1.2vw)', width: '100%',padding:'0.5rem' }}>Crunchy chicken fillet, spicy mayo, lettuce, sandwiched between a sesame seed bun</Box>
                 <Box sx={{ fontSize: 'calc(1rem + 1.5vw)', fontWeight: 'bold' }}>Rs {x.price}</Box>
 
 

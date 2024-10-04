@@ -31,7 +31,7 @@ export default function Homepage(props) {
 
 
       <Box sx={{ marginTop: { xs: '1em', sm: '1em', md: '2em', lg: '5em', xl: '5em' } }} className="hh">
-        <h1 style={{color:'white'}}>Browse Categories</h1>
+        <h1 style={{color:'white',fontSize:'bold'}}>Browse Categories</h1>
       </Box>
 
 

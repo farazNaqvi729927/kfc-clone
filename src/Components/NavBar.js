@@ -125,17 +125,7 @@ const Navbar = (props) => {
       },
     },
 
-    typography: {
-      fontSize: {
-        mobile: '12px',
-        tablet: '14px',
-        laptop: '16px',
-        desktop: '18px',
-        extraSmall: '20px',
-        extraLarge: '24px',
-        xxLarge: '28px',
-      },
-    },
+   
   });
 
 

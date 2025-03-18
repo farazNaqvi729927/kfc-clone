@@ -136,8 +136,6 @@ const Navbar = (props) => {
 
     <AppBar sx={{ backgroundColor: 'black' }} position="sticky">
 
-
-
       <StyledToolbar>
 
         <Link to='/'>

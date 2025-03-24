@@ -10,13 +10,6 @@
 }
 
 
-
-body {
-    background-color: black;
-}
-
-
-
 .a {
     display: flex;
     vertical-align: middle;
@@ -181,7 +174,7 @@ h1 {
     cursor: pointer;
     border: none;
     width: 50%;
-    font-size: calc(1rem + 1vw);
+    font-size: calc(1rem + 0.6vw);
     margin-top: 1em;
     text-transform: uppercase;
 }
@@ -196,7 +189,7 @@ h1 {
     cursor: pointer;
     border: none;
     width: 80%;
-    font-size: calc(1rem + 1vw);
+    font-size: calc(1rem + 0.5vw);
     margin-top: 1em;
     text-transform: uppercase;
 
@@ -208,7 +201,7 @@ h1 {
     color: white;
     background-color: #E4002B;
     border-radius: 2px;
-    font-size: calc(1rem + 1vw);
+    font-size: calc(1rem + 0.7vw);
     padding: 0.5em;
     text-decoration: none;
     margin-top: 1em;
@@ -371,7 +364,7 @@ span {
 
 
 .nbH {
-    font-size: calc(1rem + 1vw);
+    font-size: calc(1rem + 0.6vw);
 }
 
 
@@ -379,7 +372,7 @@ span {
     width: clamp(270px, 20%, 1000px);
     box-sizing: border-box;
     border-radius: 3%;
-    background-color: #1C1816;
+    background-color: #1C1816 !important;
     filter: drop-shadow(0px 4px 33px rgba(228, 0, 43, 0.11));
     color: white;
 }
@@ -557,27 +550,26 @@ span {
 .delB {
     color: #E4002B;
     border: none;
+    font-size: calc(1rem + 0.1vw);
     background-color: transparent;
-    font-size: calc(1rem + 0.8vw);
 }
 
 
 
 .Btn {
-    background-color: transparent;
     color: #E4002B;
     border: none;
-    font-size: calc(1rem + 1vw);
-
+    font-size: calc(1rem + 0.5vw);
+    background-color: transparent;
 }
 
 
 
 .Btn2 {
-    background-color: transparent;
     color: #E4002B;
     border: none;
-    font-size: calc(1rem + 1vw);
+    font-size: calc(1rem + 0.5vw);
+    background-color: transparent;
 }
 
 
@@ -585,7 +577,8 @@ span {
     background-color: transparent;
     color: #E4002B;
     border: none;
-    font-size: calc(1rem + 1vw);
+    font-size: calc(1rem + 0.5vw);
+    background-color: transparent;
 
 }
 
@@ -612,7 +605,7 @@ span {
 .viewB {
     z-index: 1;
     bottom: 1em;
-    padding: calc(1rem + 0.1vw);
+    padding: calc(0.8rem + 0.2vw);
     background-color: #E4002B;
     text-align: center;
     font-weight: bold;
@@ -625,7 +618,7 @@ span {
 .zxc {
     text-decoration: none;
     color: white;
-    font-size: calc(1rem + 1vw);
+    font-size: calc(1rem + 0.8vw);
     font-weight: 500;
 }
 
@@ -791,10 +784,10 @@ span {
 .y11 {
     display: flex;
     color: white;
-    font-size: calc(1rem + 1.5vw);
+    font-size: calc(1rem + 1vw);
     justify-content: space-between;
     margin-top: 1em;
-    font-weight: bold;
+    font-weight: 600;
 }
 
 
@@ -890,7 +883,7 @@ span {
 
 
 .kbN {
-    font-size: calc(1rem + 0.8vw);
+    font-size: calc(1rem + 0.6vw);
     font-weight: bold;
     line-height: 1.167;
     color: white;
@@ -900,7 +893,7 @@ span {
 
 .kbDesc {
     color: white;
-    font-size: calc(1rem + 0.8vw);
+    font-size: calc(1rem + 0.4vw);
     height: auto;
     margin-top: 1em;
 }
@@ -910,7 +903,7 @@ span {
 
 .kbP {
     color: white;
-    font-size: calc(1rem + 1vw);
+    font-size: calc(1rem + 0.7vw);
     font-weight: bold;
 }
 
@@ -941,7 +934,7 @@ span {
 
 .sbemptyB {
     text-align: center;
-    font-size: calc(1rem + 1vw);
+    font-size: calc(1rem + 0.7vw);
     margin-top: 8em;
 }
 
@@ -1042,7 +1035,7 @@ span {
 
 
 .nbLink {
-    font-size: calc(1rem + 1vw);
+    font-size: calc(1rem + 0.8vw);
 }
 
 
